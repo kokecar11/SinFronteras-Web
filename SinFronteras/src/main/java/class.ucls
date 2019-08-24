@@ -2,7 +2,7 @@
 <class-diagram version="1.2.1" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="co.edu.sinfronteras.config.AppInitializer" 
-    project="spring5-mvc-hibernate-example" 
+    project="SinFronteras" 
     file="/SinFronteras/src/main/java/co/edu/sinfronteras/config/AppInitializer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="125" y="90"/>    
@@ -13,7 +13,7 @@
     </display>  
   </class>  
   <class id="2" language="java" name="co.edu.sinfronteras.config.HibernateConfig" 
-    project="spring5-mvc-hibernate-example" 
+    project="SinFronteras" 
     file="/SinFronteras/src/main/java/co/edu/sinfronteras/config/HibernateConfig.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="395" y="88"/>    
@@ -24,7 +24,7 @@
     </display>  
   </class>  
   <class id="3" language="java" name="co.edu.sinfronteras.config.WebMvcConfig" 
-    project="spring5-mvc-hibernate-example" 
+    project="SinFronteras" 
     file="/SinFronteras/src/main/java/co/edu/sinfronteras/config/WebMvcConfig.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="669" y="86"/>    
@@ -35,7 +35,7 @@
     </display>  
   </class>  
   <class id="4" language="java" name="co.edu.sinfronteras.controller.UserController" 
-    project="spring5-mvc-hibernate-example" 
+    project="SinFronteras" 
     file="/SinFronteras/src/main/java/co/edu/sinfronteras/controller/UserController.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="124" y="244"/>    
@@ -46,7 +46,7 @@
     </display>  
   </class>  
   <interface id="5" language="java" name="co.edu.sinfronteras.service.UserService" 
-    project="spring5-mvc-hibernate-example" 
+    project="SinFronteras" 
     file="/SinFronteras/src/main/java/co/edu/sinfronteras/service/UserService.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="397" y="244"/>    
@@ -57,7 +57,7 @@
     </display>  
   </interface>  
   <class id="6" language="java" name="co.edu.sinfronteras.service.UserServiceImp" 
-    project="spring5-mvc-hibernate-example" 
+    project="SinFronteras" 
     file="/SinFronteras/src/main/java/co/edu/sinfronteras/service/UserServiceImp.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="402" y="391"/>    
@@ -67,7 +67,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="co.edu.sinfronteras.model.User" project="spring5-mvc-hibernate-example" 
+  <class id="7" language="java" name="co.edu.sinfronteras.model.User" project="SinFronteras" 
     file="/SinFronteras/src/main/java/co/edu/sinfronteras/model/User.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="243" width="211" x="743" y="172"/>    
