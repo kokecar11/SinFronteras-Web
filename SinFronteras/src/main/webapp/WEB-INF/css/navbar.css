@@ -1,0 +1,35 @@
+.navbar{
+    position: absolute;
+    width: wrapcontent;
+    background: #b4268c;
+    height: 50px;
+}
+
+.navbar a{
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    height: 50px;
+    bottom: 5px;
+     
+}
+
+.navbar-btn:focus{
+    background: #b4268c;
+    border-bottom: 3px solid #a9cd42;
+    border-top: 3px solid #1ab0da;
+}
+
+.navbar-btn:hover{
+    background: rgba(180, 38, 140, 0.9);
+    transition: 0.5s;
+}
+
+@media(min-width:1024px){
+    .navbar{
+        position: static;
+        width: auto;
+        height: auto;
+    }
+}
