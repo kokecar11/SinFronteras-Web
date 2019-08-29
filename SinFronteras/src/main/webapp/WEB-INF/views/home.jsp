@@ -2,7 +2,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-		        <link rel="stylesheet" href="/css/index.css" type="text/css">
+    <link rel="stylesheet" href="/css/index.css" type="text/css">
    <script src="https://kit.fontawesome.com/6c9ade801c.js"></script>
 	</head>
 
@@ -16,9 +16,11 @@
 
         <nav class="navbar">
           <a class ="navbar-btn"href="login.html" target="\blank">Login</a>
-          <a class ="navbar-btn" href="register.html" target="\blank">Registro</a>
+          <a class ="navbar-btn" href="editUsers" target="\blank">Registro</a>
           <a class ="navbar-btn" href="#" target="\blank">Contacto</a>
-          <a class ="navbar-btn" href="#"target="\blank" >Inicio</a>
+          <a class ="navbar-btn" href="#" target="\blank">Fundaciones</a>
+          <a class ="navbar-btn" href="#" target="\blank">Instituciones Educativas</a>
+          <a class ="navbar-btn" href=""target="\blank" >Inicio</a>
         </nav>
     </div>
   </header>
@@ -28,15 +30,21 @@
   <section id="banner">
       <div class="banner-slider">
           <ul>
-            <li><img src="/img/banner_1.jpg" class="img-fluid" alt="Responsive image"></li>
-            <li><img src="/img/banner_2.jpg" class="img-fluid" alt="Responsive image"></li>
-            <li><img src="/img/banner_3.jpg" class="img-fluid" alt="Responsive image"></li>
+            <li><img src="img/banner_1.jpg" class="img-fluid" alt="Responsive image"></li>
+            <li><img src="img/banner_2.jpg" class="img-fluid" alt="Responsive image"></li>
+            <li><img src="img/banner_3.jpg" class="img-fluid" alt="Responsive image"></li>
           </ul> 
         </div>
-       <div class="contenedor">
-          <h2 class="slogan">¡Sin Fronteras, un lugar donde podras conocer sitios de EDUCACIÓN DE ALTA CALIDAD!</h2>
-          <a href="#">Leer más...</a>
+       <div class="contenedor-slogan">
+          <p class="slogan">¡Sin Fronteras, </p>
+          <ul class="ultext">
+            <li>un lugar donde podras conocer sitios de EDUCACIÓN DE ALTA CALIDAD!</li>
+            <li>una herramienta de información EDUCATIVA!</li>
+            <li>es gratis CONTACTANOS!</li>
+          </ul>
+          
         </div>
+        <a href="#">Leer más...</a>
 
   </section>
 
@@ -147,6 +155,7 @@
           <a  href="#"> <i class="fab fa-instagram"></i> </a>
           <a href="#">  <i class="fas fa-laptop-code"></i> </a>
       </div>
+      <p class="footerslogan">Sin Fronteras una herramienta de información educativa. </p>
       <p class="copy"><i class="fas fa-american-sign-language-interpreting"></i> Sin Fronteras &copy; 2019-2020 </p>
     </div>
 

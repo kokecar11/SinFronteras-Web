@@ -19,15 +19,26 @@ public class User {
    @Column(name = "USER_ID")
    private Long id=0L;
 
-   @Column(name = "USER_NAME")
+   @Column(name = "USER_NICKNAME")
    @Size(max = 20, min = 3, message = "{user.name.invalid}")
-   @NotEmpty(message="Please Enter your name")
-   private String name;
+   @NotEmpty(message="Por favor ingrese su Nombre de Usuario.")
+   private String nickname;
 
    @Column(name = "USER_EMAIL", unique = true)
    @Email(message = "{user.email.invalid}")
-   @NotEmpty(message="Please Enter your email")
+   @NotEmpty(message="Por favor ingrese su Correo Electronico.")
    private String email;
+   
+   
+   @Column(name = "USER_NAME")
+   @Size(max = 20, min = 3, message = "{user.name.invalid}")
+   @NotEmpty(message="Por favor ingrese su Nombre.")
+   private String name;
+   
+   @Column(name = "USER_LASTNAME")
+   @Size(max = 20, min = 3, message = "{user.name.invalid}")
+   @NotEmpty(message="Por favor ingrese su Apellido.")
+   private String lastname;
 
    public Long getId() {
       return id;
@@ -35,6 +46,22 @@ public class User {
 
    public void setId(Long id) {
       this.id = id;
+   }
+   
+    public String getNickname() {
+      return name;
+   }
+
+   public void setNickname(String nickname) {
+      this.nickname = nickname;
+   }
+   
+    public String getLastname() {
+      return lastname;
+   }
+
+   public void setLastname(String lastname) {
+      this.lastname = lastname;
    }
 
    public String getName() {

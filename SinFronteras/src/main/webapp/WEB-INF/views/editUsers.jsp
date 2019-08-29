@@ -49,7 +49,7 @@
 		<h2>Users List</h2>
 		<table>
 			<tr>
-				<td><strong>Name</strong></td>
+				<td><strong>Nickname</strong></td>
 				<td><strong>Email</strong></td>
 			</tr>
 			<c:forEach items="${users}" var="user">
