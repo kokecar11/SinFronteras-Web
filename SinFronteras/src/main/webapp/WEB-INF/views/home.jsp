@@ -39,7 +39,7 @@
                   <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li><a class ="navbar-btn" href=""target="\blank">Login</a></li>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="editUsers"target="\blank">Sign in/Sign up</a></li>
           </ul>         
         </nav>
 

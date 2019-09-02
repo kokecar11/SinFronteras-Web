@@ -68,7 +68,7 @@ h1{
 
 .navbar ul li:hover ul {
     display: block;
-    position: absolute;  
+    position: absolute; 
 }
 
 @media (max-width:768px){

@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 
 @Entity
-@Table(name = "TBL_USERS")
+@Table(name = "tbl_users")
 public class User {
 
    @Id
@@ -39,44 +39,63 @@ public class User {
    @Size(max = 20, min = 3, message = "{user.name.invalid}")
    @NotEmpty(message="Por favor ingrese su Apellido.")
    private String lastname;
-
-   public Long getId() {
-      return id;
-   }
-
-   public void setId(Long id) {
-      this.id = id;
-   }
    
+   @Column(name = "USER_PASSWORD")
+   @Size(max = 20, min = 3, message = "{user.name.invalid}")
+   @NotEmpty(message="Por favor ingrese su Apellido.")
+   private String password;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNickname() {
-      return name;
-   }
+        return nickname;
+    }
 
-   public void setNickname(String nickname) {
-      this.nickname = nickname;
-   }
-   
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getLastname() {
-      return lastname;
-   }
+        return lastname;
+    }
 
-   public void setLastname(String lastname) {
-      this.lastname = lastname;
-   }
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 
-   public String getName() {
-      return name;
-   }
+    public String getPassword() {
+        return password;
+    }
 
-   public void setName(String name) {
-      this.name = name;
-   }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-   public String getEmail() {
-      return email;
-   }
+  
 
-   public void setEmail(String email) {
-      this.email = email;
-   }
+  
+
+  
 }

@@ -16,11 +16,13 @@ public class UserServiceImp implements UserService {
    private UserDao userDao;
 
    @Transactional
+   @Override
    public void save(User user) {
       userDao.save(user);
    }
 
    @Transactional(readOnly = true)
+   @Override
    public List<User> list() {
       return userDao.list();
    }
