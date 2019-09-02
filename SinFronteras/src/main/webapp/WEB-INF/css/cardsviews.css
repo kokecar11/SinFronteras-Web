@@ -49,6 +49,11 @@ button{
     font-family: 'Exo 2', sans-serif;
     color: #fff;
     transition: 0.5s;
+    
+}
+button .btn_leermas{
+    text-decoration: none;
+    color:white;
 }
 
 button:hover{

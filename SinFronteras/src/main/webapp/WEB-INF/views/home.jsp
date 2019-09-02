@@ -4,25 +4,45 @@
 <head>
     <link rel="stylesheet" href="/css/index.css" type="text/css">
    <script src="https://kit.fontawesome.com/6c9ade801c.js"></script>
-	</head>
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
 
 <body>
-  <header>
-
-    <div class="contenedor">
+  <header>  
       
-        <h1><img class="logo" src="img/logo-sinfronteras.jpeg"> Sin Fronteras <i class="fas fa-american-sign-language-interpreting"></i></h1>
-        <!--<img class="logo" src="img/logo-sinfronteras.jpeg">-->
+        <h1><img class="logo" src="img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
+
+        <input type="checkbox" id="btn-menu-navbar">
+    <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
 
         <nav class="navbar">
-          <a class ="navbar-btn"href="login.html" target="\blank">Login</a>
-          <a class ="navbar-btn" href="editUsers" target="\blank">Registro</a>
-          <a class ="navbar-btn" href="#" target="\blank">Contacto</a>
-          <a class ="navbar-btn" href="#" target="\blank">Fundaciones</a>
-          <a class ="navbar-btn" href="#" target="\blank">Instituciones Educativas</a>
-          <a class ="navbar-btn" href=""target="\blank" >Inicio</a>
+          <ul>
+            <li><a class ="navbar-btn"href="" target="\blank">Inicio</a></li>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="#">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
+              <ul>
+                <li><a class ="navbar-btn" href="#" target="\blank">Objetivos</a></li>
+                <li><a class ="navbar-btn" href="#" target="\blank">Visión</a></li>
+                <li><a class ="navbar-btn" href="#" target="\blank">Misión</a></li>
+                <li><a class ="navbar-btn" href="#" target="\blank">Contacto</a></li>
+              </ul>
+            </li>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="#">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
+              <ul>
+                  <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
+                  <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+              </ul>
+            </li>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="#">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
+              <ul>
+                  <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
+                  <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+              </ul>
+            </li>
+            <li><a class ="navbar-btn" href=""target="\blank">Login</a></li>
+          </ul>         
         </nav>
-    </div>
+
   </header>
 
 
@@ -44,7 +64,7 @@
           </ul>
           
         </div>
-        <a href="#">Leer más...</a>
+       
 
   </section>
 
@@ -55,12 +75,12 @@
     <h2 class="slogan-2">¡Ultimás Noticias!</h2>
     <div class="card-views">
       <div class="image">
-        <img src="/img/banner_2_2.jpg">
+        <img src="/img/banner_1.jpg">
         <div class="title">
-          <h2>¡Alta Calidad!</h2>
+          <h2>Instituto Nuestra Señora de la Sabiduría (INSABI)</h2>
           <div class="description">
-            <p>Contamos con <strong>Acreditación de Alta Calidad</strong></p>
-            <button>Leer más...</button>
+            <p>Institución privada sin animo de lucro fundada por las Hijas de las Sabiduría en 1942. Actualmente atienden la educación de 350 niños y jóvenes....</p>
+            <button><a class="btn_leermas" href="http://infoinsabi.blogspot.com/" target="\blank">Leer más...</a></button>
           </div>
         </div>
       </div>
@@ -73,10 +93,10 @@
         <div class="image">
           <img src="img/banner_1.jpg">
           <div class="title">
-            <h2>Semestres Academicos</h2>
+            <h2>COLEGIO SAN FRANCISCO IED</h2>
             <div class="description">
               <p>Nuestros estudiantes tienen la opción de realizar<strong>semestres académicos en el exterior</strong></p>
-              <button>Leer más...</button>
+             <button><a class="btn_leermas" href="http://infoinsabi.blogspot.com/" target="\blank">Leer más...</a></button>
             </div>
           </div>
         </div>
@@ -162,6 +182,8 @@
 
 </footer>
 
+    
+    <script src="js/navbar.js"></script>
 
 </body>
 

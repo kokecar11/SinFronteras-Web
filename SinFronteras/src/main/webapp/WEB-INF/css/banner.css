@@ -50,7 +50,7 @@
     width: auto;
     text-align: left;
 
-    animation: changeText 14s infinite;
+    animation: changeText 7s infinite;
     
 }
 
@@ -148,4 +148,5 @@ ul, p{
         height: auto;
         margin-top: -100px;
     }
+
 }
