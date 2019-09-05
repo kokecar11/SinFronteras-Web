@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import co.edu.sinfronteras.model.User;
 import co.edu.sinfronteras.service.UserService;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UserController {
@@ -28,10 +29,10 @@ public class UserController {
 	}
 	
 	@ModelAttribute("user")
-    public User formBackingObject() {
-        return new User();
-    }
-
+        public User formBackingObject() {
+            return new User();
+        }
+     
 	@PostMapping("/addUser")
 	public String saveUser(@ModelAttribute("user") @Valid User user, BindingResult result, Model model) {
 
@@ -43,4 +44,10 @@ public class UserController {
 		userService.save(user);
 		return "redirect:/editUsers";
 	}
+        
+        @GetMapping("/deleteUsers")
+        public String deleteUsers(@RequestParam ("userx") Long user){
+            userService.eliminar(user);
+            return "redirect:/editUsers";
+        }
 }

@@ -20,7 +20,13 @@ public class UserServiceImp implements UserService {
    public void save(User user) {
       userDao.save(user);
    }
-
+   
+   @Transactional
+   @Override
+   public void eliminar(Long userId){
+       userDao.eliminar(userId);
+   }
+   
    @Transactional(readOnly = true)
    @Override
    public List<User> list() {

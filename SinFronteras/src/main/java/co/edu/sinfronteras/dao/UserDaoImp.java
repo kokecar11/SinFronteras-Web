@@ -7,7 +7,6 @@ import javax.persistence.TypedQuery;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import co.edu.sinfronteras.model.User;
 
 @Repository
@@ -20,12 +19,19 @@ public class UserDaoImp implements UserDao {
    public void save(User user) {
       sessionFactory.getCurrentSession().save(user);
    }
-
+  
    @Override
    public List<User> list() {
       @SuppressWarnings("unchecked")
       TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery("from User");
       return query.getResultList();
    }
+   
+   @Override
+   public void eliminar(Long userId){
+       User u =(User)sessionFactory.getCurrentSession().get(User.class, userId);
+       sessionFactory.getCurrentSession().delete(u);
+   }
+
 
 }

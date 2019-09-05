@@ -7,4 +7,5 @@ import co.edu.sinfronteras.model.User;
 public interface UserDao {
    void save(User user);
    List<User> list();
+   void eliminar(Long userId);
 }

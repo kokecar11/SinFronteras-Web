@@ -1,8 +1,8 @@
 package co.edu.sinfronteras.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "tbl_users")
-public class User {
+public class User implements Serializable {
 
    @Id
    @Column(name = "USER_ID")

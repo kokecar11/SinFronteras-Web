@@ -60,6 +60,7 @@
 					<td>${user.email}</td>
                                         <td>${user.name}</td>
 					<td>${user.lastname}</td>
+                                        <td><a href="deleteUsers?userx=${user.getId()}">Eliminar</a></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -19,7 +19,7 @@
         <nav class="navbar">
           <ul>
             <li><a class ="navbar-btn"href="" target="\blank">Inicio</a></li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="#">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
                 <li><a class ="navbar-btn" href="#" target="\blank">Objetivos</a></li>
                 <li><a class ="navbar-btn" href="#" target="\blank">Visión</a></li>
@@ -27,13 +27,13 @@
                 <li><a class ="navbar-btn" href="#" target="\blank">Contacto</a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="#">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
                   <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
                   <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="#">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
                   <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
                   <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
