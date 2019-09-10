@@ -11,7 +11,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import co.edu.sinfronteras.model.User;
 import co.edu.sinfronteras.service.UserService;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,10 +21,10 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@GetMapping("/editUsers")
+	@GetMapping("/registerUsers")
 	public String userForm(Locale locale, Model model) {
 		model.addAttribute("users", userService.list());
-		return "editUsers";
+		return "registerUsers";
 	}
 	
 	@ModelAttribute("user")
@@ -38,16 +37,16 @@ public class UserController {
 
 		if (result.hasErrors()) {
 			model.addAttribute("users", userService.list());
-			return "editUsers";
+			return "registerUsers";
 		}
 
 		userService.save(user);
-		return "redirect:/editUsers";
+		return "redirect:/registerUsers";
 	}
         
         @GetMapping("/deleteUsers")
-        public String deleteUsers(@RequestParam ("userx") Long user){
+        public String deleteUsers(@RequestParam ("userx") Integer user){
             userService.eliminar(user);
-            return "redirect:/editUsers";
+            return "redirect:/registerUsers";
         }
 }

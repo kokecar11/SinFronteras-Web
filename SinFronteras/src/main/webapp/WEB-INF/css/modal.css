@@ -1,0 +1,76 @@
+@import url('login.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Exo 2', sans-serif;
+
+}
+
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.450);   
+}
+
+.contenido-modal{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    width: 50%;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.4); 
+    animation: 5s modal ;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #1ab0da;
+    
+}
+
+.modal-header,.modal-footer{
+    padding: 8px 8px; 
+    background: #fefefe;  
+    text-align: justify;  
+}
+.modal-body{
+ 
+  
+}
+.close{
+    color: #1ab0da;
+    font-size: 36px;
+    transition: .5s;
+    float:right;
+    padding: 8px 8px; 
+}
+.close:hover{
+    cursor: pointer;
+    color: rgba(180, 38, 140, 0.9);
+    transition: .5s;
+}
+
+@keyframes modal{
+    from{top: -330px; 
+        opacity: 0;
+    }
+    to{top:0; 
+        opacity: 1;
+        
+    }
+}

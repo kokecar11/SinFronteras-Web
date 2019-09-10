@@ -6,6 +6,6 @@ import co.edu.sinfronteras.model.User;
 
 public interface UserService {
    void save(User user);
-   void eliminar(Long userId);
+   void eliminar(Integer userId);
    List<User> list();
 }

@@ -23,7 +23,7 @@ public class UserServiceImp implements UserService {
    
    @Transactional
    @Override
-   public void eliminar(Long userId){
+   public void eliminar(Integer userId){
        userDao.eliminar(userId);
    }
    

@@ -1,101 +1,158 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package co.edu.sinfronteras.model;
 
 import java.io.Serializable;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotEmpty;
-
-
+/**
+ *
+ * @author KokeCarpintero
+ */
 @Entity
-@Table(name = "tbl_users")
+@Table(name = "user")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
+    , @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = :userId")
+    , @NamedQuery(name = "User.findByUserNickname", query = "SELECT u FROM User u WHERE u.userNickname = :userNickname")
+    , @NamedQuery(name = "User.findByUserEmail", query = "SELECT u FROM User u WHERE u.userEmail = :userEmail")
+    , @NamedQuery(name = "User.findByUserName", query = "SELECT u FROM User u WHERE u.userName = :userName")
+    , @NamedQuery(name = "User.findByUserLastname", query = "SELECT u FROM User u WHERE u.userLastname = :userLastname")
+    , @NamedQuery(name = "User.findByUserPassword", query = "SELECT u FROM User u WHERE u.userPassword = :userPassword")})
 public class User implements Serializable {
 
-   @Id
-   @Column(name = "USER_ID")
-   private Long id=0L;
-
-   @Column(name = "USER_NICKNAME")
-   @Size(max = 20, min = 3, message = "{user.name.invalid}")
-   @NotEmpty(message="Por favor ingrese su Nombre de Usuario.")
-   private String nickname;
-
-   @Column(name = "USER_EMAIL", unique = true)
-   @Email(message = "{user.email.invalid}")
-   @NotEmpty(message="Por favor ingrese su Correo Electronico.")
-   private String email;
    
-   
-   @Column(name = "USER_NAME")
-   @Size(max = 20, min = 3, message = "{user.name.invalid}")
-   @NotEmpty(message="Por favor ingrese su Nombre.")
-   private String name;
-   
-   @Column(name = "USER_LASTNAME")
-   @Size(max = 20, min = 3, message = "{user.name.invalid}")
-   @NotEmpty(message="Por favor ingrese su Apellido.")
-   private String lastname;
-   
-   @Column(name = "USER_PASSWORD")
-   @Size(max = 20, min = 3, message = "{user.name.invalid}")
-   @NotEmpty(message="Por favor ingrese su Apellido.")
-   private String password;
+    @Id
+    @Column(name = "USER_ID")
+    private Integer userId=0;
 
-    public Long getId() {
-        return id;
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "USER_NICKNAME")
+    private String userNickname;
+    
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "USER_EMAIL")
+    private String userEmail;
+
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "USER_NAME")
+    private String userName;
+
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "USER_LASTNAME")
+    private String userLastname;
+
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "USER_PASSWORD")
+    private String userPassword;
+
+    public User() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public User(Integer userId) {
+        this.userId = userId;
     }
 
-    public String getNickname() {
-        return nickname;
+    public User(Integer userId, String userNickname, String userEmail, String userName, String userLastname, String userPassword) {
+        this.userId = userId;
+        this.userNickname = userNickname;
+        this.userEmail = userEmail;
+        this.userName = userName;
+        this.userLastname = userLastname;
+        this.userPassword = userPassword;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public String getEmail() {
-        return email;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getUserNickname() {
+        return userNickname;
     }
 
-    public String getName() {
-        return name;
+    public void setUserNickname(String userNickname) {
+        this.userNickname = userNickname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public String getLastname() {
-        return lastname;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getPassword() {
-        return password;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public String getUserLastname() {
+        return userLastname;
     }
 
-  
+    public void setUserLastname(String userLastname) {
+        this.userLastname = userLastname;
+    }
 
-  
+    public String getUserPassword() {
+        return userPassword;
+    }
 
-  
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (userId != null ? userId.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof User)) {
+            return false;
+        }
+        User other = (User) object;
+        if ((this.userId == null && other.userId != null) || (this.userId != null && !this.userId.equals(other.userId))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "co.edu.sinfronteras.model.User[ userId=" + userId + " ]";
+    }
+    
 }
