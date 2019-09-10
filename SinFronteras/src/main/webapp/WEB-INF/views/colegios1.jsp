@@ -19,7 +19,7 @@
 
         <nav class="navbar">
           <ul>
-            <li><a class ="navbar-btn" href="" target="\self">Inicio</a></li>
+            <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
                 <li><a class ="navbar-btn" href="#" target="\blank">Objetivos</a></li>
