@@ -23,24 +23,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class InstitucionesController {
-
-
     /**
      * Simply selects the home view to render by returning its name.
      */
-        @GetMapping("/instituciones")
+        @GetMapping("instituciones")
 	public String instituciones(Locale locale, Model model) {
 		return "instituciones";
 	}
         
-        @GetMapping("/instituciones/sordos")
-	public String institucionesS(Locale locale, Model model) {
-		return "instituciones/sordos";
-	}
-        
-         @GetMapping("/instituciones/")
-	public String institucionesC(Locale locale, Model model) {
+        @GetMapping("instituciones/ciegos")
+	public String sinvision(Locale locale, Model model) {
 		return "instituciones/ciegos";
 	}
-
+        
+        @GetMapping("instituciones/sordos")
+	public String sinescucha(Locale locale, Model model) {
+		return "instituciones/sordos";
+	}
 }

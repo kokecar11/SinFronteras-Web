@@ -20,24 +20,24 @@
         <nav class="navbar">
           <ul>
             <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="nosotros">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                <li><a class ="navbar-btn" href="#" target="\blank">Objetivos</a></li>
-                <li><a class ="navbar-btn" href="#" target="\blank">Visión</a></li>
-                <li><a class ="navbar-btn" href="#" target="\blank">Misión</a></li>
-                <li><a class ="navbar-btn" href="#" target="\blank">Contacto</a></li>
+                <li><a class ="navbar-btn" href="nosotros/objetivos" target="\blank">Objetivos</a></li>
+                <li><a class ="navbar-btn" href="nosotros/vision" target="\blank">Visión</a></li>
+                <li><a class ="navbar-btn" href="nosotros/mision" target="\blank">Misión</a></li>
+                <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto</a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                  <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
-                  <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+                  <li><a class ="navbar-btn" href="/fundaciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
+                  <li><a class ="navbar-btn" href="/fundaciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
-                  <li><a class ="navbar-btn" href="instituciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
-                  <li><a class ="navbar-btn" href="instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+                  <li><a class ="navbar-btn" href="/instituciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
+                  <li><a class ="navbar-btn" href="/instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn"  id="open">Sign in/Sign up</a></li>
