@@ -27,7 +27,7 @@
     font-size: 36px;
 }
 
-input[type="text"],input[type="password"]{
+input[type="text"],input[type="password"],input[type="tel"]{
     font-size: 20px;
     width: 82%;
     padding: 10px;
@@ -45,7 +45,6 @@ textarea{
     margin-bottom:15px;
     border: 1px solid rgba(180, 38, 140, 0.9);
 }
-
 
 .icon{
     color: #1ab0da;

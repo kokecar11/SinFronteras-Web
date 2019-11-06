@@ -37,7 +37,7 @@
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
                   <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
-                  <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+                  <li><a class ="navbar-btn" href="instituciones" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn"  id="open">Sign in/Sign up</a></li>

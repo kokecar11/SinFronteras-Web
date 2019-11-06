@@ -19,28 +19,27 @@
                 <div class="content-form">
                     <div class="input-content">
                             <i class="fas fa-user icon"></i>
-                            <form:input path="userNickname" type="text" placeholder="Usuario"/>
-                    </div>
-                    <div class="input-content">
-                            <i class="fas fa-envelope icon"></i>
-                           <form:input path="userEmail" placeholder="Correo Electronico"/>
-                    </div>
-                    <div class="input-content">
-                        <i class="fas fa-align-left icon"></i>
-                        <form:input path="userName" type="text" placeholder="Nombres"/>
+                            <form:input path="userName" type="text" placeholder="Nombres"/>
                     </div>
                     <div class="input-content">
                         <i class="fas fa-align-left icon"></i>
                          <form:input path="userLastname" type="text" placeholder="Apellidos"/>
                    </div>
                     <div class="input-content">
-                            <i class="fas fa-key icon"></i>
-                            <form:input path="userPassword" type="password" placeholder="Contraseña"/>
+                            <i class="fas fa-envelope icon"></i>
+                           <form:input path="userEmail" placeholder="Correo Electronico"/>
                     </div>
-                    
-                    
+                    <div class="input-content">
+                            <i class="fas fa-key icon"></i>
+                            <form:input path="userPassword" type="password" required="on" placeholder="Contraseña"/>
+                    </div>
+                    <div class="input-content">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <form:input path="userTel" type="tel" placeholder="Telefono"/>
+                    </div>
+                
                    <input type="submit" value="Registrar!" class="btn-registro">
-                    <p>Al registrate, aceptas nuestras condiciones de uso y políticas de privacidad.</p>
+                    <p>Al llenar el registro, aceptas nuestras condiciones de uso y políticas de privacidad.</p>
                     <p>¿Ya tienes una Cuenta? <a  class="link" id="open">Iniciar Sesión</a></p>
                 </div>
 		</form:form>
@@ -57,9 +56,9 @@
 			<c:forEach items="${users}" var="user">
 				<tr>
                                         <td>${user.userId}</td>
-					<td>${user.userNickname}</td>
+					<td>${user.userName}</td>
 					<td>${user.userEmail}</td>
-                                        <td>${user.userName}</td>
+                                        <td>${user.userTel}</td>
 					<td>${user.userLastname}</td>
                                         <td><a href="deleteUsers?userx=${user.getUserId()}">Eliminar</a></td>
 				</tr>

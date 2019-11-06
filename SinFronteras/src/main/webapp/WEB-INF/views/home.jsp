@@ -19,7 +19,7 @@
 
         <nav class="navbar">
           <ul>
-            <li><a class ="navbar-btn" href="" target="\self">Inicio</a></li>
+            <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
                 <li><a class ="navbar-btn" href="#" target="\blank">Objetivos</a></li>
@@ -34,10 +34,10 @@
                   <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
-                  <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
-                  <li><a class ="navbar-btn" href="colegios1" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+                  <li><a class ="navbar-btn" href="instituciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
+                  <li><a class ="navbar-btn" href="instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn"  id="open">Sign in/Sign up</a></li>
