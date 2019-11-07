@@ -77,16 +77,29 @@
 
 </main>
         
+        <div class="contenedor">
+            <div>
+                
+            </div>
+            
+            
+            
+            
+        </div>
+        
+        
+        
         
         <footer>
   <div class="contenedor">
+      
+      <p class="footerslogan">Sin Fronteras una herramienta de información educativa. </p>
+      <p class="copy"><i class="fas fa-american-sign-language-interpreting"></i> Sin Fronteras &copy; 2019-2020 </p>
       <div class="sociales">
        <a href="#"> <i class="fab fa-facebook-square"></i> </a>
           <a  href="#"> <i class="fab fa-instagram"></i> </a>
           <a href="#">  <i class="fas fa-laptop-code"></i> </a>
       </div>
-      <p class="footerslogan">Sin Fronteras una herramienta de información educativa. </p>
-      <p class="copy"><i class="fas fa-american-sign-language-interpreting"></i> Sin Fronteras &copy; 2019-2020 </p>
     </div>
 </footer>
 

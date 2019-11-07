@@ -11,9 +11,7 @@
     border-radius: 5px;
     margin:60px;
     transition: 0.5s;
-    color: #fff;
-    
-        
+    color: #fff;     
 }
 
 .card-views:hover{

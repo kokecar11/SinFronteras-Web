@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class FundacionesController {
     
-     @GetMapping("fundaciones")
+        @GetMapping("fundaciones")
 	public String instituciones(Locale locale, Model model) {
 		return "fundaciones";
 	}

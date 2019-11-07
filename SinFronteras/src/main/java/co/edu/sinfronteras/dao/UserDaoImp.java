@@ -33,5 +33,8 @@ public class UserDaoImp implements UserDao {
        sessionFactory.getCurrentSession().delete(u);
    }
 
+   public void modificar(User user){
+       sessionFactory.getCurrentSession().update(user);
+   }
 
 }

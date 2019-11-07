@@ -8,4 +8,5 @@ public interface UserDao {
    void save(User user);
    List<User> list();
    void eliminar(Integer userId);
+   void modificar(User user);
 }

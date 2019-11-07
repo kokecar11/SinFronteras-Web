@@ -82,8 +82,20 @@
           <p class="parrafor-cl">Somos una entidad educativa privada sin ánimo de lucro, fundada por la congregación Religiosa Las Hijas de la Sabiduría  desde 1924, enfocados a trabajar por  la educación,  el desarrollo humano y la formación para el trabajo.</p>
       </div>
   </div>
-</div>
     
+     <div class="clasificado">
+      <div class="clasificado-title">
+          <h3>Instituto Nuestra Señora de la Sabiduría (INSABI)</h3>
+      </div>
+      <div class="clasificado-img"> 
+          <img src="img/fondo_1.jpg" class="image-cl" alt="Responsive image">
+      </div>
+      <div class="clasificado-parrafo">
+          <p class="parrafor-cl">Somos una entidad educativa privada sin ánimo de lucro, fundada por la congregación Religiosa Las Hijas de la Sabiduría  desde 1924, enfocados a trabajar por  la educación,  el desarrollo humano y la formación para el trabajo.</p>
+      </div>
+     </div>
+</div>
+        
     
     <div id="mymodal" class="modal">
     <div class="flex" id="flex">

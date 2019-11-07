@@ -26,6 +26,11 @@ public class UserServiceImp implements UserService {
    public void eliminar(Integer userId){
        userDao.eliminar(userId);
    }
+   @Transactional
+   @Override
+   public void modificar(User user){
+       userDao.modificar(user);
+   }
    
    @Transactional(readOnly = true)
    @Override

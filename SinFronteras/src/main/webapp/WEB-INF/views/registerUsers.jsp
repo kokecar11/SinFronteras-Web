@@ -18,20 +18,20 @@
                      <h1 class="slogan-3"><i class="fas fa-address-card"></i></i> Formulario de Registro</h1>
                 <div class="content-form">
                     <div class="input-content">
-                            <i class="fas fa-user icon"></i>
-                            <form:input path="userName" type="text" placeholder="Nombres"/>
+                        <i class="fas fa-user icon"></i>
+                        <form:input path="userName" type="text" placeholder="Nombres"/>
                     </div>
                     <div class="input-content">
                         <i class="fas fa-align-left icon"></i>
-                         <form:input path="userLastname" type="text" placeholder="Apellidos"/>
+                        <form:input path="userLastname" type="text" placeholder="Apellidos"/>
                    </div>
                     <div class="input-content">
-                            <i class="fas fa-envelope icon"></i>
-                           <form:input path="userEmail" placeholder="Correo Electronico"/>
+                        <i class="fas fa-envelope icon"></i>
+                        <form:input path="userEmail" placeholder="Correo Electronico"/>
                     </div>
                     <div class="input-content">
-                            <i class="fas fa-key icon"></i>
-                            <form:input path="userPassword" type="password" required="on" placeholder="Contraseña"/>
+                        <i class="fas fa-key icon"></i>
+                        <form:input path="userPassword" type="password" required="on" placeholder="Contraseña"/>
                     </div>
                     <div class="input-content">
                         <i class="fas fa-phone-alt icon"></i>
@@ -61,6 +61,7 @@
                                         <td>${user.userTel}</td>
 					<td>${user.userLastname}</td>
                                         <td><a href="deleteUsers?userx=${user.getUserId()}">Eliminar</a></td>
+                                        <td><a href="deleteUsers?userx=${user.getUserId()}">Modificar</a></td>
 				</tr>
 			</c:forEach>
 		</table>

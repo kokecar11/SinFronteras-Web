@@ -69,6 +69,8 @@ footer .contenedor{
 	background: #1ab0da;
 	border-radius: 5px;
 	width: 300px;
+        position: absolute;
+        text-align: center;
 }
 
 .sociales{
@@ -76,7 +78,7 @@ footer .contenedor{
 	width: 100%;
 	text-align: center;
 	font-size: 28px;
-	margin-top: 45px;
+	margin-top: 40px;
 	position: absolute;
 }
 

@@ -111,8 +111,8 @@
           <div class="title">
             <h2>Cursos intersemestrales</h2>
             <div class="description">
-              <p>Ofrecemos la posibilidad de tomar<strong> cursos opcionales intersemestrales,</strong> y así incrementar el numero de creditos a cursar.</p>
-              <button>Leer más...</button>
+              <p>El Grupo Social ONCE y el Grupo Planeta han llegado a un acuerdo este lunes para que la organización de servicios para las personas ciegas o con otra discapacidad adapte libros y audiolibros del catálogo de la editorial al lenguaje braille, el sistema de lectura táctil diseñado para personas invidentes.</p>
+              <button><a class="btn_leermas" href="https://elpais.com/cultura/2019/07/08/actualidad/1562589024_340278.html" target="\blank">Leer más...</a></button>
             </div>
           </div>
         </div>
