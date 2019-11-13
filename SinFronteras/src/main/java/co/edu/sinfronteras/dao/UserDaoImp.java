@@ -9,15 +9,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import co.edu.sinfronteras.model.User;
 import org.hibernate.Session;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Repository
 public class UserDaoImp implements UserDao {
 
    @Autowired
    private SessionFactory sessionFactory;
+   
+      @Autowired
+   private BCryptPasswordEncoder encriptar;
 
    @Override
    public void save(User user) {
+      user.setUserPassword(encriptar.encode(user.getUserPassword()));
       sessionFactory.getCurrentSession().save(user);
    }
   
@@ -44,6 +49,11 @@ public class UserDaoImp implements UserDao {
         Session currentSession = sessionFactory.getCurrentSession();
         User user = currentSession.get(User.class, userId);
         return user;
+    }
+    
+    @Override
+    public User findUserByEmail(String email) {
+        return sessionFactory.getCurrentSession().get(User.class, email);
     }
     
 

@@ -9,4 +9,5 @@ public interface UserDao {
    void eliminar(Integer userId);
    void modificar(User userId);
    public User getUser(int userId);
+   User findUserByEmail(String email);
 }

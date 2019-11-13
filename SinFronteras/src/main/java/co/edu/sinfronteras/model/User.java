@@ -59,10 +59,25 @@ public class User implements Serializable {
     @Column(name = "Tel_User")
     private String userTel;
     
+    
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "Rol_User")
+    private String userRol;
+    
+    
     @NotNull
     @Value("0")
     @Column(name = "Status_User")
     private Integer userStatus = 1 ;
+
+    public String getUserRol() {
+        return userRol;
+    }
+
+    public void setUserRol(String userRol) {
+        this.userRol = userRol;
+    }
 
     public User() {
     }
