@@ -6,21 +6,25 @@
 
 .clasificado{
     width: 45%;
-    margin-top: 35px;
-    margin-bottom:35px; 
+    margin-top: 25px;
+    margin-bottom:1px; 
     position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+    color:white;
 }
 .clasificado-title h3{
     text-align: center;
     font-size: 22px;
-    background-color:rgba(26, 176, 218,0.8);
+    background-color:rgba(26, 176, 218,0.5);
     width: 100%;
 }
 
 .clasificado-img{
     width: 100%;
     position: relative;
-    background-color:rgba(26, 176, 218,0.8); 
+    background-color:rgba(26, 176, 218,0.5); 
 }
 
 .image-cl{
@@ -32,7 +36,7 @@
 .clasificado-parrafo{
     font-size: 15px;
     width: 100%;
-    background-color:rgba(26, 176, 218,0.8);
+    background-color:rgba(26, 176, 218,0.5);
     margin-bottom: 20px;
     
 }

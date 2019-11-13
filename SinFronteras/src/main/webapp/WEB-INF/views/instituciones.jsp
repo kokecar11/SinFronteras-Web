@@ -1,5 +1,7 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
     <link rel="stylesheet" href="/css/index.css" type="text/css">
@@ -10,34 +12,31 @@
 </head>
 
 <body>
-  <header>  
+    <header>  
       
-        <h1><img class="logo" src="img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
+        <h1><img class="logo" src="/img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
 
         <input type="checkbox" id="btn-menu-navbar">
-    <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
+          <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
 
         <nav class="navbar">
           <ul>
             <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="../nosotros">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                <li><a class ="navbar-btn" href="#" target="\blank">Objetivos</a></li>
-                <li><a class ="navbar-btn" href="#" target="\blank">Visión</a></li>
-                <li><a class ="navbar-btn" href="#" target="\blank">Misión</a></li>
-                <li><a class ="navbar-btn" href="#" target="\blank">Contacto</a></li>
+                <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto</a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="fundaciones">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                  <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
-                  <li><a class ="navbar-btn" href="#" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+                  <li><a class ="navbar-btn" href="/fundaciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
+                  <li><a class ="navbar-btn" href="/fundaciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
-                  <li><a class ="navbar-btn" href="#" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
-                  <li><a class ="navbar-btn" href="instituciones" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
+                  <li><a class ="navbar-btn" href="/instituciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
+                  <li><a class ="navbar-btn" href="/instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn"  id="open">Sign in/Sign up</a></li>
@@ -68,32 +67,26 @@
   </section>
 </main>
     
+ 
     
 <div class="contenedor">
-    <h2 class="slogan-2">Información de Colegios</h2>
+    <h2 class="slogan-2">Información de Instituciones Educativas</h2>
+    <c:forEach items="${instituciones}" var="institucion">
+        
+        
     <div class="clasificado">
       <div class="clasificado-title">
-          <h3>Instituto Nuestra Señora de la Sabiduría (INSABI)</h3>
+          <h3>${institucion.instName}</h3>
       </div>
       <div class="clasificado-img"> 
           <img src="img/fondo_1.jpg" class="image-cl" alt="Responsive image">
       </div>
       <div class="clasificado-parrafo">
-          <p class="parrafor-cl">Somos una entidad educativa privada sin ánimo de lucro, fundada por la congregación Religiosa Las Hijas de la Sabiduría  desde 1924, enfocados a trabajar por  la educación,  el desarrollo humano y la formación para el trabajo.</p>
+          <p class="parrafor-cl">${institucion.instDescripcion}</p>
       </div>
-  </div>
+    </div>
+    </c:forEach>
     
-     <div class="clasificado">
-      <div class="clasificado-title">
-          <h3>Instituto Nuestra Señora de la Sabiduría (INSABI)</h3>
-      </div>
-      <div class="clasificado-img"> 
-          <img src="img/fondo_1.jpg" class="image-cl" alt="Responsive image">
-      </div>
-      <div class="clasificado-parrafo">
-          <p class="parrafor-cl">Somos una entidad educativa privada sin ánimo de lucro, fundada por la congregación Religiosa Las Hijas de la Sabiduría  desde 1924, enfocados a trabajar por  la educación,  el desarrollo humano y la formación para el trabajo.</p>
-      </div>
-     </div>
 </div>
         
     

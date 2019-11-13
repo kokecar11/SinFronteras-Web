@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>  
+      <header>  
       
         <h1><img class="logo" src="/img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
 
@@ -33,7 +33,7 @@
                   <li><a class ="navbar-btn" href="/fundaciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="../instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
                   <li><a class ="navbar-btn" href="/instituciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
                   <li><a class ="navbar-btn" href="/instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
@@ -65,28 +65,57 @@
           
         </div>
   </section>
+
+
 </main>
-    
-    
-<div class="contenedor">
-    <h2 class="slogan-2">Información de Fundaciones</h2>
-    <c:forEach items="${fundaciones}" var="fundacion">			
-    
-    <div class="clasificado">
-      <div class="clasificado-title">
-          <h3>${fundacion.fundaName}</h3>
-      </div>
-      <div class="clasificado-img"> 
-          <img src="img/fondo_1.jpg" class="image-cl" alt="Responsive image">
-      </div>
-      <div class="clasificado-parrafo">
-          <p class="parrafor-cl">${fundacion.fundaDescripcion}</p>
-      </div>
+<div class="contenedor">    
+      <h2 class="slogan-2">Mi Perfil</h2>
+      <br>
+      <br>
+    <div class="perfil-user">
+        <div class="perfil-user2">
+           <i class="fas fa-user-circle iconuser"></i> 
+         
+			
+			<c:forEach items="${users}" var="user">
+                         <c:set var = "uservar" scope = "session" value = "8"/>
+                         <c:if test = "${user.userId == uservar}">
+				           
+           
+                <div class="input-content2"> 
+                    <label class="Label-user">ID</label>
+                    <label class="Label-user2">${user.userId}</label>
+                </div>
+                <div class="input-content2"> 
+                    <label class="Label-user">Nombre</label>
+                    <label class="Label-user2">${user.userName}</label>
+                </div>
+                <div class="input-content2"> 
+                    <label class="Label-user">Apellidos</label>
+                    <label class="Label-user2">${user.userLastname}</label>
+                </div>
+                <div class="input-content2"> 
+                    <label class="Label-user">Correo Electronico</label>
+                    <label class="Label-user2">${user.userEmail}</label>
+                </div>
+                <div class="input-content2"> 
+                    <label class="Label-user">Telefono</label>
+                    <label class="Label-user2">${user.userTel}</label>
+                </div>
+           <br>
+           <br>
+           <a href="deleteUsers?userx=${user.getUserId()}" class="btn-modificarU">Eliminar</a>  <a href="updateUsers?userx=${user.getUserId()}" class="btn-modificarU">Modificar</a>
+                </c:if>
+               </c:forEach>
+           <br>
+            <br>
+           
+       </div>
+       
     </div>
-    </c:forEach>
-    
 </div>
-        
+    
+    <br>
     
     <div id="mymodal" class="modal">
     <div class="flex" id="flex">
@@ -118,7 +147,7 @@
       </div>
     </div>
   </div>
-
+    
 <footer>
   <div class="contenedor">
       <div class="sociales">

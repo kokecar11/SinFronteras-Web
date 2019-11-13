@@ -1,0 +1,87 @@
+.perfil-user{
+        width: 100%;     
+     
+   
+}
+
+.perfil-user2{
+    background-color: white;
+    width: 50%;
+    border: 3px solid rgba(180, 38, 140, 0.9);       
+    height: auto;
+    padding: 15px;
+    margin-bottom: 25px; 
+    justify-content:center;   
+}
+
+.iconuser{
+    color: #1ab0da;
+    font-size: 100px;
+    
+}
+
+.formularioUser{
+    background: white;
+    padding: 3px;
+    position: relative;
+    display: inline-block;
+    border: 3px solid #1ab0da;
+    width: 45%;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    float: left;
+   
+}
+
+.content-formU{
+    width: 100%;
+    padding: 15px;
+}
+
+input[type="text"],input[type="password"],input[type="tel"],select,textarea{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.input-content2{
+    margin-bottom:15px;
+    border: 1px solid rgba(180, 38, 140, 0.9);
+}
+.Label-user{
+    font-size: 15px;
+    float: left;
+    width: 29%;
+    text-align: justify;
+    
+}
+.Label-user2{
+    font-size: 15px;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center; 
+    
+}
+
+.btn-modificarU{
+    border: none;
+    text-decoration: none;
+    width: 40%;
+    color: white;
+    font-size: 20px;
+    background: #1ab0da;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.btn-modificarU:hover{
+    background: rgba(180, 38, 140, 0.9);
+    transition: .5s;
+}

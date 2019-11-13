@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>  
+      <header>  
       
         <h1><img class="logo" src="/img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
 
@@ -33,7 +33,7 @@
                   <li><a class ="navbar-btn" href="/fundaciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="../instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
                   <li><a class ="navbar-btn" href="/instituciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
                   <li><a class ="navbar-btn" href="/instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
@@ -64,29 +64,81 @@
           </ul>
           
         </div>
+       
+
   </section>
+
+
 </main>
-    
-    
-<div class="contenedor">
-    <h2 class="slogan-2">Información de Fundaciones</h2>
-    <c:forEach items="${fundaciones}" var="fundacion">			
-    
-    <div class="clasificado">
-      <div class="clasificado-title">
-          <h3>${fundacion.fundaName}</h3>
-      </div>
-      <div class="clasificado-img"> 
-          <img src="img/fondo_1.jpg" class="image-cl" alt="Responsive image">
-      </div>
-      <div class="clasificado-parrafo">
-          <p class="parrafor-cl">${fundacion.fundaDescripcion}</p>
-      </div>
+<div class="contenedor">    
+      <h2 class="slogan-2">Perfil de Usuario</h2>
+      <br>
+      <br>
+      <div class="perfil-user">
+        <form:form action="addFundaciones" method="post" modelAttribute="fundacion" class="formularioUser">
+            <h2 class="slogan-2">Información de Fundación o Institución</h2>
+               
+                <div class="content-formU">
+                    <div class="input-content2">
+                        <i class="fas fa-user icon"></i>
+                        <form:input path="fundaName" type="text" placeholder="Nombre de Fundación/Institución"/>
+                    </div>
+                    
+                     <div class="input-content2">
+                        <i class="fas fa-list icon"></i>
+                        <form:select path=""  >
+                            <form:option value="Fundación"/>    
+                            <form:option value="Institución"/>   
+                        </form:select>
+                   </div>
+                    
+                    <div class="input-content2">
+                        <i class="fas fa-list icon"></i>
+                        <form:select path="fundaTipo"  >
+                            <form:option value="Discapacidad Auditiva"/>    
+                            <form:option value="Discapacidad Visual"/>   
+                        </form:select>
+                   </div>
+                    <div class="input-content2">
+                       <i class="fas fa-exclamation icon"></i>
+                        <form:input path="fundaMision" placeholder="Misión de la Fundación/Institución"/>
+                    </div>
+                    <div class="input-content2">
+                        <i class="fas fa-eye icon"></i>
+                        <form:input path="fundaVision" type="text" placeholder="Visión de la Fundación/Institución"/>
+                    </div>
+                    <div class="input-content2">
+                        <i class="fas fa-align-left icon"></i>
+                        <form:textarea path="fundaDescripcion" placeholder="Escribe una Descripción Breve..."/>
+                    </div>
+                    <div class="input-content2">
+                        <i class="fas fa-link icon"></i>
+                        <form:input path="fundaLink" type="text" placeholder="URL de la Fundación/Institución"/>
+                    </div>
+                    <div class="input-content2">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <form:input path="fundaTel" type="tel" placeholder="Telefono"/>
+                    </div>    
+                    
+                        <div class="input-content2">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <form:input path="fundaRoles" type="text" placeholder="Rol"/>
+                    </div>
+                    
+                    <div class="input-content2">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <form:input path="fundaRolesUser" type="text" placeholder="UserId"/>
+                    </div>
+                
+                   <input type="submit" value="Guardar" class="btn-modificarU">
+                </div>
+		</form:form>
+           
     </div>
-    </c:forEach>
-    
+
 </div>
-        
+    
+    <br>
     
     <div id="mymodal" class="modal">
     <div class="flex" id="flex">
@@ -118,7 +170,7 @@
       </div>
     </div>
   </div>
-
+    
 <footer>
   <div class="contenedor">
       <div class="sociales">

@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import co.edu.sinfronteras.model.User;
 import co.edu.sinfronteras.service.UserService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
@@ -49,4 +52,20 @@ public class UserController {
             userService.eliminar(user);
             return "redirect:/registerUsers";
         }
+        
+        @GetMapping("/updateUsers")
+        public String showFormForUpdate(@RequestParam("userx") int userId,Model model) {
+            User user = userService.getUser(userId);
+            model.addAttribute("user", user);
+            return "updateUser";
+        }
+        
+        @GetMapping("/perfilUser")
+        public String perfil(Locale locale ,Model model) {
+            model.addAttribute("users", userService.list());
+            return "perfilUser";
+        }
+     
 }
+
+

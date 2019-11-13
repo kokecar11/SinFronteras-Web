@@ -89,7 +89,7 @@ h1{
     .navbar ul{
         display: block;       
     }
-
+ 
     .navbar ul li:hover ul{
         display: none;
         position: static;

@@ -20,20 +20,17 @@
         <h1><img class="logo" src="img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
 
         <input type="checkbox" id="btn-menu-navbar">
-    <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
+          <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
 
         <nav class="navbar">
           <ul>
             <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="nosotros">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                <li><a class ="navbar-btn" href="nosotros/objetivos" target="\blank">Objetivos</a></li>
-                <li><a class ="navbar-btn" href="nosotros/vision" target="\blank">Visión</a></li>
-                <li><a class ="navbar-btn" href="nosotros/mision" target="\blank">Misión</a></li>
                 <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto</a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="/fundaciones">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
                   <li><a class ="navbar-btn" href="/fundaciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
                   <li><a class ="navbar-btn" href="/fundaciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
@@ -78,17 +75,31 @@
 </main>
         
         <div class="contenedor">
-            <div>
+            
+            <div class="contenedorN">
                 
+                <h2 class="Titulo-1">Nosotros</h2>
+                <p class="parrafor-2">Somos una fundación sin animo de lucro, que brinda una herramienta informativa facilitando a las personas con discapacidad visual o auditiva las diferentes instituciones educativas
+                                      y fundaciones donde podrán formarse, con el fin de ubicar a las personas en un entorno educativo.</p>
+                    <br>
+                    <br>
             </div>
             
+            <div class="contenedorN">
+                <h2 class="Titulo-1">Objetivo</h2>
+                <p class="parrafor-2">Nuestro Objetivo como fundación es informar a las personas con discapacidad visual o auditiva de las instituciones educativas especializadas,
+                                      esta información es diligenciada por las instituciones o fundaciones, con el fin de que estas personas adquieran una Educación de Alta Calidad
+                                     cumpliendo así uno de los ODS de la ONU.</p>
+                    <br>
+                    <br>
+            </div>   
             
-            
-            
+            <img src="img/logo-sinfronteras.jpeg">
         </div>
         
         
-        
+        <br>
+        <br>
         
         <footer>
   <div class="contenedor">

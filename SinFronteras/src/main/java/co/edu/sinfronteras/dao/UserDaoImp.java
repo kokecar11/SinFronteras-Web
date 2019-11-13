@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import co.edu.sinfronteras.model.User;
+import org.hibernate.Session;
 
 @Repository
 public class UserDaoImp implements UserDao {
@@ -33,8 +34,17 @@ public class UserDaoImp implements UserDao {
        sessionFactory.getCurrentSession().delete(u);
    }
 
-   public void modificar(User user){
-       sessionFactory.getCurrentSession().update(user);
-   }
+   @Override
+    public void modificar(User userId) {
+        sessionFactory.getCurrentSession().update(userId);
+    }
+    
+    @Override
+    public User getUser(int userId) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        User user = currentSession.get(User.class, userId);
+        return user;
+    }
+    
 
 }

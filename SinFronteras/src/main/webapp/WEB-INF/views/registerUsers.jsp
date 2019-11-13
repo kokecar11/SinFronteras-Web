@@ -15,7 +15,9 @@
 	</head>
 	<body class="body-login">
 		<form:form action="addUser" method="post" modelAttribute="user" class="formulario">
+                     
                      <h1 class="slogan-3"><i class="fas fa-address-card"></i></i> Formulario de Registro</h1>
+                <form:hidden path="userId" />
                 <div class="content-form">
                     <div class="input-content">
                         <i class="fas fa-user icon"></i>
@@ -37,6 +39,7 @@
                         <i class="fas fa-phone-alt icon"></i>
                         <form:input path="userTel" type="tel" placeholder="Telefono"/>
                     </div>
+                    <form:hidden path="userStatus" />
                 
                    <input type="submit" value="Registrar!" class="btn-registro">
                     <p>Al llenar el registro, aceptas nuestras condiciones de uso y políticas de privacidad.</p>
@@ -61,7 +64,7 @@
                                         <td>${user.userTel}</td>
 					<td>${user.userLastname}</td>
                                         <td><a href="deleteUsers?userx=${user.getUserId()}">Eliminar</a></td>
-                                        <td><a href="deleteUsers?userx=${user.getUserId()}">Modificar</a></td>
+                                        <td><a href="updateUsers?userx=${user.getUserId()}">Modificar</a></td>
 				</tr>
 			</c:forEach>
 		</table>

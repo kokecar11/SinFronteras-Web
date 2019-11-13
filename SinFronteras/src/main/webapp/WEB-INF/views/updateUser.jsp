@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>  
+      <header>  
       
         <h1><img class="logo" src="/img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
 
@@ -33,7 +33,7 @@
                   <li><a class ="navbar-btn" href="/fundaciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="../instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="instituciones">Instituciones Educativas <span><i class="fas fa-chevron-down"></i></a>
               <ul>
                   <li><a class ="navbar-btn" href="/instituciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
                   <li><a class ="navbar-btn" href="/instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
@@ -65,28 +65,47 @@
           
         </div>
   </section>
+
+
 </main>
-    
-    
-<div class="contenedor">
-    <h2 class="slogan-2">Información de Fundaciones</h2>
-    <c:forEach items="${fundaciones}" var="fundacion">			
-    
-    <div class="clasificado">
-      <div class="clasificado-title">
-          <h3>${fundacion.fundaName}</h3>
-      </div>
-      <div class="clasificado-img"> 
-          <img src="img/fondo_1.jpg" class="image-cl" alt="Responsive image">
-      </div>
-      <div class="clasificado-parrafo">
-          <p class="parrafor-cl">${fundacion.fundaDescripcion}</p>
-      </div>
+<div class="contenedor">    
+      <h2 class="slogan-2">Perfil de Usuario</h2>
+      <br>
+      <br>
+    <div class="perfil-user">
+        <form:form action="updateUsers" method="post" modelAttribute="user" class="formularioUser">
+            <h2 class="slogan-2">Información Usuario</h2>
+                <form:hidden path="userId" />
+                <div class="content-formU">
+                    <div class="input-content2">
+                        <i class="fas fa-user icon"></i>
+                        <form:input path="userName" type="text" placeholder="Nombres"/>
+                    </div>
+                    <div class="input-content2">
+                        <i class="fas fa-align-left icon"></i>
+                        <form:input path="userLastname" type="text" placeholder="Apellidos"/>
+                   </div>
+                    <div class="input-content2">
+                        <i class="fas fa-envelope icon"></i>
+                        <form:input path="userEmail" placeholder="Correo Electronico"/>
+                    </div>
+                    <div class="input-content2">
+                        <i class="fas fa-key icon"></i>
+                        <form:input path="userPassword" type="password" required="on" placeholder="Contraseña"/>
+                    </div>
+                    <div class="input-content2">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <form:input path="userTel" type="tel" placeholder="Telefono"/>
+                    </div>            
+                    <form:hidden path="userStatus" />
+                
+                   <input type="submit" value="Guardar" class="btn-modificarU">
+                </div>
+		</form:form>
     </div>
-    </c:forEach>
-    
 </div>
-        
+    
+    <br>
     
     <div id="mymodal" class="modal">
     <div class="flex" id="flex">
@@ -118,7 +137,7 @@
       </div>
     </div>
   </div>
-
+    
 <footer>
   <div class="contenedor">
       <div class="sociales">

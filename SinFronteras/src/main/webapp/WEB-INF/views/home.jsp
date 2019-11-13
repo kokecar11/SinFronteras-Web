@@ -6,29 +6,27 @@
     <link rel="stylesheet" href="/css/modal.css" type="text/css">
    <script src="https://kit.fontawesome.com/6c9ade801c.js"></script>
    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   <title>Inicio</title>
 
 </head>
 
 <body>
-  <header>  
+      <header>  
       
-        <h1><img class="logo" src="img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
+        <h1><img class="logo" src="/img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
 
         <input type="checkbox" id="btn-menu-navbar">
-    <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
+          <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
 
         <nav class="navbar">
           <ul>
             <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="nosotros">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="../nosotros">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                <li><a class ="navbar-btn" href="nosotros/objetivos" target="\blank">Objetivos</a></li>
-                <li><a class ="navbar-btn" href="nosotros/vision" target="\blank">Visión</a></li>
-                <li><a class ="navbar-btn" href="nosotros/mision" target="\blank">Misión</a></li>
                 <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto</a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn" href="">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
+            <li class="sub-navbar-btn"><a class ="navbar-btn" href="fundaciones">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
                   <li><a class ="navbar-btn" href="/fundaciones/ciegos" target="\blank">Ciegos <i class="fas fa-braille"></i></a></li>
                   <li><a class ="navbar-btn" href="/fundaciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
