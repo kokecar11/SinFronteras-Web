@@ -59,4 +59,17 @@ public class InstitucionesController {
             model.addAttribute("instituciones", institucionesService.list());
             return "instituciones/sordos";
         }
+        
+          @GetMapping("fundaciones/ciegos")
+	public String sinvisionfund(Locale locale, Model model) {
+                model.addAttribute("instituciones", institucionesService.list());
+		return "fundaciones/ciegos";
+	}
+        
+        @GetMapping("fundaciones/sordos")
+	public String sinescuchafund(Locale locale, Model model) {
+            model.addAttribute("instituciones", institucionesService.list());	
+            return "fundaciones/sordos";
+	}
+    
 }

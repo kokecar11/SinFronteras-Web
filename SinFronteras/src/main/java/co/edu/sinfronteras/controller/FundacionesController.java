@@ -58,16 +58,5 @@ public class FundacionesController {
 	}
         
         
-        @GetMapping("fundaciones/ciegos")
-	public String sinvision(Locale locale, Model model) {
-                model.addAttribute("fundaciones", fundacionesService.list());
-		return "fundaciones/ciegos";
-	}
-        
-        @GetMapping("fundaciones/sordos")
-	public String sinescucha(Locale locale, Model model) {
-            model.addAttribute("fundaciones", fundacionesService.list());	
-            return "fundaciones/sordos";
-	}
-    
+      
 }

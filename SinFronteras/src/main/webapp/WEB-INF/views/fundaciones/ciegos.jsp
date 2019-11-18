@@ -70,32 +70,35 @@
     
 <div class="contenedor">
     <h2 class="slogan-2">Fundaciones para Discapacidad Visual</h2>
-    <c:forEach items="${fundaciones}" var="fundacion">			
+    <c:forEach items="${instituciones}" var="institucion">
+         <c:set var = "tipo" scope = "session" value = "Fundacion"/>
+        <c:if test = "${institucion.Tipo == tipo}">
     <c:set var = "ciegos" scope = "session" value = "Discapacidad Visual"/>
-    <c:if test = "${fundacion.fundaTipo == ciegos}">
+    <c:if test = "${institucion.instTipo == ciegos}">
     <div class="clasificado">
       <div class="clasificado-title">
-          <h3>${fundacion.fundaName}</h3>
+          <h3>${institucion.instName}</h3>
       </div>
       <div class="clasificado-img"> 
           <img src="/img/fondo_1.jpg" class="image-cl" alt="Responsive image">
       </div>
       <div class="clasificado-parrafo">
+        <br>
+          <p class="parrafor-cl">Misión: ${institucion.instMision}</p>
           <br>
-          <p class="parrafor-cl">Misión: ${fundacion.fundaMision}</p>
+          <p class="parrafor-cl">Visión: ${institucion.instVision}</p>
           <br>
-          <p class="parrafor-cl">Visión: ${fundacion.fundaVision}</p>
+          <p class="parrafor-cl">Descripción: ${institucion.instDescripcion}</p>
           <br>
-          <p class="parrafor-cl">Descripción: ${fundacion.fundaDescripcion}</p>
+          <p class="parrafor-cl">Telefono: ${institucion.instTel}</p>
           <br>
-          <p class="parrafor-cl">Telefono: ${fundacion.fundaTel}</p>
-          <br>
-          <p class="parrafor-cl">Link: ${fundacion.fundaLink}</p>
+          <p class="parrafor-cl">Link: ${institucion.instLink}</p>
           <br>
       </div>
       
     </div>
           </c:if>
+    </c:if>
     </c:forEach>
     
 </div>
