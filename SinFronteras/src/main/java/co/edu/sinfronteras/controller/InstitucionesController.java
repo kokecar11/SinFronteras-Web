@@ -37,7 +37,11 @@ public class InstitucionesController {
             model.addAttribute("instituciones", institucionesService.list());
 		return "instituciones";
 	}
-        
+        @GetMapping("/fundaciones")
+	public String fundaciones(Locale locale, Model model) {
+		model.addAttribute("instituciones", institucionesService.list());
+		return "fundaciones";
+	}
          
         @ModelAttribute("institucion")
         public Instituciones formBackingObject() {

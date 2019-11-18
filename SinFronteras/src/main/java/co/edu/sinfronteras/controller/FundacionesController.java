@@ -27,12 +27,12 @@ public class FundacionesController {
     
 	@Autowired
 	private FundacionesService fundacionesService;
-        
+        /*
         @GetMapping("/fundaciones")
 	public String fundaciones(Locale locale, Model model) {
 		model.addAttribute("fundaciones", fundacionesService.list());
 		return "fundaciones";
-	}
+	}*/
         
         @ModelAttribute("fundacion")
         public Fundaciones formBackingObject() {

@@ -81,12 +81,12 @@
                 <div class="content-formU">
                     <div class="input-content2">
                         <i class="fas fa-user icon"></i>
-                        <form:input path="fundaName" type="text" placeholder="Nombre de Fundación/Institución"/>
+                        <form:input path="instName" type="text" placeholder="Nombre de Fundación/Institución"/>
                     </div>
                     
                      <div class="input-content2">
                         <i class="fas fa-list icon"></i>
-                        <form:select path=""  >
+                        <form:select path="Tipo"  >
                             <form:option value="Fundación"/>    
                             <form:option value="Institución"/>   
                         </form:select>
@@ -94,40 +94,35 @@
                     
                     <div class="input-content2">
                         <i class="fas fa-list icon"></i>
-                        <form:select path="fundaTipo"  >
+                        <form:select path="instTipo"  >
                             <form:option value="Discapacidad Auditiva"/>    
                             <form:option value="Discapacidad Visual"/>   
                         </form:select>
                    </div>
                     <div class="input-content2">
                        <i class="fas fa-exclamation icon"></i>
-                        <form:input path="fundaMision" placeholder="Misión de la Fundación/Institución"/>
+                        <form:input path="instMision" placeholder="Misión de la Fundación/Institución"/>
                     </div>
                     <div class="input-content2">
                         <i class="fas fa-eye icon"></i>
-                        <form:input path="fundaVision" type="text" placeholder="Visión de la Fundación/Institución"/>
+                        <form:input path="instVision" type="text" placeholder="Visión de la Fundación/Institución"/>
                     </div>
                     <div class="input-content2">
                         <i class="fas fa-align-left icon"></i>
-                        <form:textarea path="fundaDescripcion" placeholder="Escribe una Descripción Breve..."/>
+                        <form:textarea path="instDescripcion" placeholder="Escribe una Descripción Breve..."/>
                     </div>
                     <div class="input-content2">
                         <i class="fas fa-link icon"></i>
-                        <form:input path="fundaLink" type="text" placeholder="URL de la Fundación/Institución"/>
+                        <form:input path="instLink" type="text" placeholder="URL de la Fundación/Institución"/>
                     </div>
                     <div class="input-content2">
                         <i class="fas fa-phone-alt icon"></i>
-                        <form:input path="fundaTel" type="tel" placeholder="Telefono"/>
+                        <form:input path="instTel" type="tel" placeholder="Telefono"/>
                     </div>    
                     
                         <div class="input-content2">
                         <i class="fas fa-phone-alt icon"></i>
-                        <form:input path="fundaRoles" type="text" placeholder="Rol"/>
-                    </div>
-                    
-                    <div class="input-content2">
-                        <i class="fas fa-phone-alt icon"></i>
-                        <form:input path="fundaRolesUser" type="text" placeholder="UserId"/>
+                        <form:input path="instRolesUser" type="text" placeholder="Rol"/>
                     </div>
                 
                    <input type="submit" value="Guardar" class="btn-modificarU">

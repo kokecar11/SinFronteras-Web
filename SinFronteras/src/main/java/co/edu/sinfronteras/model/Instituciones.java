@@ -38,6 +38,11 @@ public class Instituciones implements Serializable {
     private String instTipo;
     
     @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "Tipo")
+    private String instTipo2;
+    
+    @NotNull
     @Column(name = "Mision_inst")
     private String instMision;
 
@@ -56,14 +61,10 @@ public class Instituciones implements Serializable {
     @NotNull
     @Column(name = "Tel_inst")
     private String instTel;
-    
+        
     @NotNull
-    @Column(name = "Roles_idRoles")
-    private Integer instRoles;
-    
-    @NotNull
-    @Column(name = "Roles_Usuarios_idUser")
-    private Integer instRolesUser;
+    @Column(name = "usuarios_idUser")
+    private Integer instRolesUser = 0;
 
     public Integer getInstId() {
         return instId;
@@ -87,6 +88,14 @@ public class Instituciones implements Serializable {
 
     public void setInstTipo(String instTipo) {
         this.instTipo = instTipo;
+    }
+    
+    public String getInstTipo2() {
+        return instTipo2;
+    }
+
+    public void setInstTipo2(String instTipo2) {
+        this.instTipo2 = instTipo2;
     }
 
     public String getInstMision() {
@@ -129,14 +138,6 @@ public class Instituciones implements Serializable {
         this.instTel = instTel;
     }
 
-    public Integer getInstRoles() {
-        return instRoles;
-    }
-
-    public void setInstRoles(Integer instRoles) {
-        this.instRoles = instRoles;
-    }
-
     public Integer getInstRolesUser() {
         return instRolesUser;
     }
@@ -144,32 +145,7 @@ public class Instituciones implements Serializable {
     public void setInstRolesUser(Integer instRolesUser) {
         this.instRolesUser = instRolesUser;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 41 * hash + Objects.hashCode(this.instId);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Instituciones other = (Instituciones) obj;
-        if (!Objects.equals(this.instId, other.instId)) {
-            return false;
-        }
-        return true;
-    }
-    
+   
     
     
 }

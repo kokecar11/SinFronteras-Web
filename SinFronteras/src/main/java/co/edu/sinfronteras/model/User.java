@@ -50,7 +50,7 @@ public class User implements Serializable {
     private String userEmail;
 
     @NotNull
-    @Size(min = 1, max = 45)
+    @Size(min = 1, max = 200)
     @Column(name = "Password_User")
     private String userPassword;
 
@@ -70,15 +70,7 @@ public class User implements Serializable {
     @Value("0")
     @Column(name = "Status_User")
     private Integer userStatus = 1 ;
-
-    public String getUserRol() {
-        return userRol;
-    }
-
-    public void setUserRol(String userRol) {
-        this.userRol = userRol;
-    }
-
+    
     public User() {
     }
 
@@ -129,6 +121,13 @@ public class User implements Serializable {
     public void setUserTel(String userTel) {
         this.userTel = userTel;
     }
+     public String getUserRol() {
+        return userRol;
+    }
+
+    public void setUserRol(String userRol) {
+        this.userRol = userRol;
+    }
 
     public Integer getUserStatus() {
         return userStatus;
@@ -136,61 +135,5 @@ public class User implements Serializable {
 
     public void setUserStatus(Integer userStatus) {
         this.userStatus = userStatus;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.userId);
-        hash = 97 * hash + Objects.hashCode(this.userName);
-        hash = 97 * hash + Objects.hashCode(this.userLastname);
-        hash = 97 * hash + Objects.hashCode(this.userEmail);
-        hash = 97 * hash + Objects.hashCode(this.userPassword);
-        hash = 97 * hash + Objects.hashCode(this.userTel);
-        hash = 97 * hash + Objects.hashCode(this.userStatus);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final User other = (User) obj;
-        if (!Objects.equals(this.userName, other.userName)) {
-            return false;
-        }
-        if (!Objects.equals(this.userLastname, other.userLastname)) {
-            return false;
-        }
-        if (!Objects.equals(this.userEmail, other.userEmail)) {
-            return false;
-        }
-        if (!Objects.equals(this.userPassword, other.userPassword)) {
-            return false;
-        }
-        if (!Objects.equals(this.userTel, other.userTel)) {
-            return false;
-        }
-        if (!Objects.equals(this.userId, other.userId)) {
-            return false;
-        }
-        if (!Objects.equals(this.userStatus, other.userStatus)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" + "userId=" + userId + ", userName=" + userName + ", userLastname=" + userLastname + ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", userTel=" + userTel + ", userStatus=" + userStatus + '}';
-    }
-
-    
+    }   
 }

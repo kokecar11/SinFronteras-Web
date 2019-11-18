@@ -70,54 +70,25 @@
     
 <div class="contenedor">
     <h2 class="slogan-2">Información de Fundaciones</h2>
-    <c:forEach items="${fundaciones}" var="fundacion">			
+    <c:forEach items="${instituciones}" var="institucion">	
+        <c:set var = "tipo" scope = "session" value = "Fundacion"/>
+        <c:if test = "${institucion.Tipo == tipo}">
     
     <div class="clasificado">
       <div class="clasificado-title">
-          <h3>${fundacion.fundaName}</h3>
+          <h3>${institucion.instName}</h3>
       </div>
       <div class="clasificado-img"> 
           <img src="img/fondo_1.jpg" class="image-cl" alt="Responsive image">
       </div>
       <div class="clasificado-parrafo">
-          <p class="parrafor-cl">${fundacion.fundaDescripcion}</p>
+          <p class="parrafor-cl">${institucion.instDescripcion}</p>
       </div>
     </div>
+      </c:if>
     </c:forEach>
     
 </div>
-        
-    
-    <div id="mymodal" class="modal">
-    <div class="flex" id="flex">
-      <div class="contenido-modal">
-        <div class="modal-header">
-            <h1 class="slogan-3"><i class="fas fa-user-circle"></i> Iniciar Sesión</h1>
-            <span class="close" id="close"><i class="fas fa-window-close"></i></span>
-        </div>
-        <div class="modal-body">
-            <form class="formulario" action="">
-                <div class="content-form">
-                    <div class="input-content">
-                            <i class="fas fa-user icon"></i>
-                            <input type="text" placeholder="Usuario">
-                    </div>
-                    <div class="input-content">
-                            <i class="fas fa-key icon"></i>
-                            <input type="password" placeholder="Contrase&ntilde;a">
-                    </div>
-                    <input type="submit" value="Iniciar Sesión" class="btn-registro">
-                    
-                  </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-              <p>Al registrate, aceptas nuestras condiciones de uso y políticas de privacidad.</p>
-              <p>¿Aún no tienes una Cuenta? <a href="registerUsers" class="link">Registrar!</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <footer>
   <div class="contenedor">
