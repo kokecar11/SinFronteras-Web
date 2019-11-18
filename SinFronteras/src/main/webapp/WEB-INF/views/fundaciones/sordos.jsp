@@ -71,8 +71,8 @@
 <div class="contenedor">
     <h2 class="slogan-2">Fundaciones para Discapacidad Auditiva</h2>
      <c:forEach items="${instituciones}" var="institucion">
-         <c:set var = "tipo" scope = "session" value = "Fundacion"/>
-        <c:if test = "${institucion.Tipo == tipo}">
+         <c:set var = "tipo" scope = "session" value = "Fundación"/>
+        <c:if test = "${institucion.instTipo2 == tipo}">
     <c:set var = "sordos" scope = "session" value = "Discapacidad Auditiva"/>
     <c:if test = "${institucion.instTipo == sordos}">
     <div class="clasificado">

@@ -11,12 +11,15 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.logging.Logger;
+import javax.validation.Valid;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -71,5 +74,25 @@ public class InstitucionesController {
             model.addAttribute("instituciones", institucionesService.list());	
             return "fundaciones/sordos";
 	}
+        
+         @GetMapping("/perfilFundacion")
+        public String perfil(Locale locale ,Model model) {
+            model.addAttribute("fundaciones", institucionesService.list());
+            return "perfilFundacion";
+        }
+        
+        
+        @PostMapping("/addFundaciones")
+	public String saveFundaciones(@ModelAttribute("institucion") @Valid Instituciones instituciones, BindingResult result, Model model) {
+
+		if (result.hasErrors()) {
+			model.addAttribute("instituciones", institucionesService.list());
+			return "perfilFundacion";
+		}
+
+		institucionesService.save(instituciones);
+		return "redirect:/perfilFundacion";
+	}
+        
     
 }

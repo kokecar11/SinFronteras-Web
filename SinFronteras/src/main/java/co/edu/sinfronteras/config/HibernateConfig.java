@@ -1,8 +1,6 @@
 package co.edu.sinfronteras.config;
 
-import co.edu.sinfronteras.model.Fundaciones;
 import co.edu.sinfronteras.model.Instituciones;
-import co.edu.sinfronteras.model.Roles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -27,7 +25,7 @@ public class HibernateConfig {
 	public LocalSessionFactoryBean getSessionFactory() {
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
 		factoryBean.setConfigLocation(context.getResource("classpath:hibernate.cfg.xml"));
-		factoryBean.setAnnotatedClasses(User.class, Fundaciones.class,Instituciones.class,Roles.class);
+		factoryBean.setAnnotatedClasses(User.class,Instituciones.class);
 		return factoryBean;
 	}
         

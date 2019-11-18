@@ -70,7 +70,9 @@
     
 <div class="contenedor">
     <h2 class="slogan-2">Instituciones para Discapacidad Visual</h2>
-    <c:forEach items="${instituciones}" var="institucion">			
+    <c:forEach items="${instituciones}" var="institucion">
+         <c:set var = "tipo" scope = "session" value = "Institución"/>
+         <c:if test = "${institucion.instTipo2 == tipo}">
     <c:set var = "ciegos" scope = "session" value = "Discapacidad Visual"/>
     <c:if test = "${institucion.instTipo == ciegos}">
     <div class="clasificado">
@@ -96,6 +98,7 @@
       
     </div>
           </c:if>
+    </c:if>
     </c:forEach>
     
 </div>

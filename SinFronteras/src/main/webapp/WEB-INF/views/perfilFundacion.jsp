@@ -82,7 +82,7 @@
       <div class="perfil-user">
         <form:form action="addFundaciones" method="post" modelAttribute="fundacion" class="formularioUser">
             <h2 class="slogan-2">Información de Fundación o Institución</h2>
-               
+               <form:hidden path="instId" />
                 <div class="content-formU">
                     <div class="input-content2">
                         <i class="fas fa-user icon"></i>
@@ -91,7 +91,7 @@
                     
                      <div class="input-content2">
                         <i class="fas fa-list icon"></i>
-                        <form:select path="Tipo"  >
+                        <form:select path="instTipo2"  >
                             <form:option value="Fundación"/>    
                             <form:option value="Institución"/>   
                         </form:select>

@@ -48,6 +48,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/addUser").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/perfilFundacion").permitAll()
+                .antMatchers("/addFundaciones").permitAll()
                 .antMatchers("/perfilUser").hasAnyAuthority("ADMIN","USUARIOCOMUN")
                 .antMatchers("/loginAction").permitAll()
                 .antMatchers("/error").permitAll()
