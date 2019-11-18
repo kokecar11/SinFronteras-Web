@@ -39,11 +39,7 @@
                         <i class="fas fa-phone-alt icon"></i>
                         <form:input path="userTel" type="tel" placeholder="Telefono"/>
                     </div>
-                     <div class="input-content">
-                        <i class="fas fa-phone-alt icon"></i>
-                        <form:input path="userRol" type="text" placeholder="Rol"/>
-                    </div>
-                    
+
                     <form:hidden path="userStatus" />
                 
                    <input type="submit" value="Registrar!" class="btn-registro">

@@ -17,14 +17,14 @@
         <h1><img class="logo" src="/img/logo-sinfronteras.jpeg"> Sin Fronteras</h1>
 
         <input type="checkbox" id="btn-menu-navbar">
-          <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
+        <label for="btn-menu-navbar"><i class="fas fa-bars"></i></label>
 
         <nav class="navbar">
           <ul>
             <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="../nosotros">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto</a></li>
+                <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto<span><i class="fas fa-file-signature"></i></span></a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="fundaciones">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
@@ -39,7 +39,12 @@
                   <li><a class ="navbar-btn" href="/instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn"  id="open">Sign in/Sign up</a></li>
+            <li class="sub-navbar-btn"><a class ="navbar-btn">Registro <span><i class="fas fa-chevron-down"></span></i></a>
+              <ul>
+                  <li><a class ="navbar-btn" href="/registerUsers" target="\blank">Registrar <i class="fas fa-user-plus"></i></a></li>
+                  <li><a class ="navbar-btn" href="/login" target="\blank">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a></li>
+              </ul>
+            </li>
           </ul>         
         </nav>
 
@@ -107,36 +112,6 @@
     
     <br>
     
-    <div id="mymodal" class="modal">
-    <div class="flex" id="flex">
-      <div class="contenido-modal">
-        <div class="modal-header">
-            <h1 class="slogan-3"><i class="fas fa-user-circle"></i> Iniciar Sesión</h1>
-            <span class="close" id="close"><i class="fas fa-window-close"></i></span>
-        </div>
-        <div class="modal-body">
-            <form class="formulario" action="">
-                <div class="content-form">
-                    <div class="input-content">
-                            <i class="fas fa-user icon"></i>
-                            <input type="text" placeholder="Usuario">
-                    </div>
-                    <div class="input-content">
-                            <i class="fas fa-key icon"></i>
-                            <input type="password" placeholder="Contrase&ntilde;a">
-                    </div>
-                    <input type="submit" value="Iniciar Sesión" class="btn-registro">
-                    
-                  </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-              <p>Al registrate, aceptas nuestras condiciones de uso y políticas de privacidad.</p>
-              <p>¿Aún no tienes una Cuenta? <a href="registerUsers" class="link">Registrar!</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
     
 <footer>
   <div class="contenedor">

@@ -62,10 +62,10 @@ public class User implements Serializable {
     
     @NotNull
     @Size(min = 1, max = 45)
+    @Value("USUARIOCOMUN")
     @Column(name = "Rol_User")
-    private String userRol;
-    
-    
+    private String userRol="USUARIOCOMUN";
+       
     @NotNull
     @Value("0")
     @Column(name = "Status_User")

@@ -24,7 +24,7 @@
             <li><a class ="navbar-btn" href="/" target="\self">Inicio</a></li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="../nosotros">Nosotros <span><i class="fas fa-chevron-down"></i></span></a>
               <ul>
-                <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto</a></li>
+                <li><a class ="navbar-btn" href="nosotros/contacto" target="\blank">Contacto<span><i class="fas fa-file-signature"></i></span></a></li>
               </ul>
             </li>
             <li class="sub-navbar-btn"><a class ="navbar-btn" href="fundaciones">Fundaciones <span><i class="fas fa-chevron-down"></i></span></a>
@@ -39,7 +39,12 @@
                   <li><a class ="navbar-btn" href="/instituciones/sordos" target="\blank">Sordos <i class="fas fa-american-sign-language-interpreting"></i></a></li>
               </ul>
             </li>
-            <li class="sub-navbar-btn"><a class ="navbar-btn"  id="open">Sign in/Sign up</a></li>
+            <li class="sub-navbar-btn"><a class ="navbar-btn">Registro <span><i class="fas fa-chevron-down"></span></i></a>
+              <ul>
+                  <li><a class ="navbar-btn" href="/registerUsers" target="\blank">Registrar <i class="fas fa-user-plus"></i></a></li>
+                  <li><a class ="navbar-btn" href="/login" target="\blank">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></a></li>
+              </ul>
+            </li>
           </ul>         
         </nav>
 
