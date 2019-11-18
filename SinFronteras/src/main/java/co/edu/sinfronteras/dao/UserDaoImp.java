@@ -41,14 +41,14 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-    public void modificar(User userId) {
-        sessionFactory.getCurrentSession().update(userId);
+    public void modificar(User idUser) {
+        sessionFactory.getCurrentSession().update(idUser);
     }
     
     @Override
-    public User getUser(int userId) {
+    public User getUser(int idUser) {
         Session currentSession = sessionFactory.getCurrentSession();
-        User user = currentSession.get(User.class, userId);
+        User user = currentSession.get(User.class, idUser);
         return user;
     }
     
@@ -59,6 +59,14 @@ public class UserDaoImp implements UserDao {
         query.setParameter("Email_User", Email_User);
         User u = (User) query.uniqueResult();
         return u;
+    }
+
+    @Override
+    public Object obtenerActual() {
+        String email = null ;
+        
+        //metodo
+        return (User)findUserByEmail(email);
     }
     
 

@@ -22,11 +22,11 @@
                 <div class="content-form">
                     <div class="input-content">
                         <i class="fas fa-envelope icon"></i>
-                     <input required="on" type="text" placeholder="Correo Electronico" />
+                     <input required="on" type="text" name="Email_User" placeholder="Correo Electronico" />
                     </div>
                     <div class="input-content">
                         <i class="fas fa-key icon"></i>
-                        <input  type="password" required="on" placeholder="Contraseña"/>
+                        <input name="Password_User" type="password" required="on" placeholder="Contraseña"/>
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn-registro">
                     <p>¿Aún no tienes una Cuenta? <a href="registerUsers" class="link">Registrar!</a></p>

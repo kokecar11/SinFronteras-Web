@@ -43,6 +43,12 @@ public class UserServiceImp implements UserService {
     public User getUser(int idUser) {
         return userDao.getUser(idUser);
     }
+
+    @Override
+    @Transactional
+    public Object obtenerActual() {
+        return userDao.obtenerActual();
+    }
    
  
 }

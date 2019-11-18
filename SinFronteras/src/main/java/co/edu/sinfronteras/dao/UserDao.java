@@ -10,4 +10,6 @@ public interface UserDao {
    void modificar(User idUser);
    public User getUser(int idUser);
    User findUserByEmail(String Email_User);
+
+    public Object obtenerActual();
 }

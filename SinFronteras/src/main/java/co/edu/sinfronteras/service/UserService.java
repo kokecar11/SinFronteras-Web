@@ -10,4 +10,6 @@ public interface UserService {
    void modificar(User idUser);
    List<User> list();
    public User getUser(int idUser);
+
+    public Object obtenerActual();
 }

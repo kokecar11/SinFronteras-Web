@@ -83,33 +83,33 @@
          
 			
 			<c:forEach items="${users}" var="user">
-                         <c:set var = "uservar" scope = "session" value = "8"/>
+                         <c:set var = "uservar" scope = "session" value = "${UserActual.getIdUser()}"/>
                          <c:if test = "${user.userId == uservar}">
 				           
            
                 <div class="input-content2"> 
                     <label class="Label-user">ID</label>
-                    <label class="Label-user2">${user.userId}</label>
+                    <label class="Label-user2">${user.getIdUser}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Nombre</label>
-                    <label class="Label-user2">${user.userName}</label>
+                    <label class="Label-user2">${user.getName_User}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Apellidos</label>
-                    <label class="Label-user2">${user.userLastname}</label>
+                    <label class="Label-user2">${user.getLastName_User}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Correo Electronico</label>
-                    <label class="Label-user2">${user.userEmail}</label>
+                    <label class="Label-user2">${user.getEmail_User}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Telefono</label>
-                    <label class="Label-user2">${user.userTel}</label>
+                    <label class="Label-user2">${user.getTel_User}</label>
                 </div>
            <br>
            <br>
-           <a href="deleteUsers?userx=${user.getUserId()}" class="btn-modificarU">Eliminar</a>  <a href="updateUsers?userx=${user.getUserId()}" class="btn-modificarU">Modificar</a>
+           <a href="deleteUsers?userx=${user.getIdUser()}" class="btn-modificarU">Eliminar</a>  <a href="updateUsers?userx=${user.getIdUser()}" class="btn-modificarU">Modificar</a>
                 </c:if>
                </c:forEach>
            <br>
