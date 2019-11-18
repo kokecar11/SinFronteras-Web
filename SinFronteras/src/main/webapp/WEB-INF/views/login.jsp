@@ -1,4 +1,19 @@
-   <div id="mymodal" class="modal">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Registro</title>
+
+          <link rel="stylesheet" href="/css/modal.css" type="text/css">
+          <script src="https://kit.fontawesome.com/6c9ade801c.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		
+	</head>
+<div id="mymodal" class="modal">
     <div class="flex" id="flex">
       <div class="contenido-modal">
         <div class="modal-header">
@@ -28,3 +43,11 @@
       </div>
     </div>
   </div>
+        
+                </div>
+      </div>
+    </div>
+  </div>
+<script src="js/modal.js"></script>
+	</body>
+</html>
