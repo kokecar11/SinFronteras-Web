@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import co.edu.sinfronteras.model.User;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Repository
@@ -22,7 +23,7 @@ public class UserDaoImp implements UserDao {
 
    @Override
    public void save(User user) {
-      user.setUserPassword(encriptar.encode(user.getUserPassword()));
+      user.setPassword_User(encriptar.encode(user.getPassword_User()));
       sessionFactory.getCurrentSession().save(user);
    }
   
@@ -34,8 +35,8 @@ public class UserDaoImp implements UserDao {
    }
    
    @Override
-   public void eliminar(Integer userId){
-       User u =(User)sessionFactory.getCurrentSession().get(User.class, userId);
+   public void eliminar(Integer idUser){
+       User u =(User)sessionFactory.getCurrentSession().get(User.class, idUser);
        sessionFactory.getCurrentSession().delete(u);
    }
 
@@ -52,8 +53,12 @@ public class UserDaoImp implements UserDao {
     }
     
     @Override
-    public User findUserByEmail(String email) {
-        return sessionFactory.getCurrentSession().get(User.class, email);
+    public User findUserByEmail(String Email_User) {
+        String hql = "from User where Email_User=:Email_User";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        query.setParameter("Email_User", Email_User);
+        User u = (User) query.uniqueResult();
+        return u;
     }
     
 

@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
 <html>
         <head>
@@ -16,21 +17,21 @@
         <body class="body-login">
             
             
-            <form:form action="addUser" method="post" modelAttribute="user" class="formulario">
+            <form action='<spring:url value="/loginAction"/>' method="post" class="formulario">
                  <h1 class="slogan-3"><i class="fas fa-user-circle"></i> Iniciar Sesión</h1>
                 <div class="content-form">
                     <div class="input-content">
                         <i class="fas fa-envelope icon"></i>
-                     <input path="userEmail" required="on" type="text" placeholder="Correo Electronico" />
+                     <input required="on" type="text" placeholder="Correo Electronico" />
                     </div>
                     <div class="input-content">
                         <i class="fas fa-key icon"></i>
-                        <input path="userPassword" type="password" required="on" placeholder="Contraseña"/>
+                        <input  type="password" required="on" placeholder="Contraseña"/>
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn-registro">
                     <p>¿Aún no tienes una Cuenta? <a href="registerUsers" class="link">Registrar!</a></p>
                   </div>
-            </form:form>
+            </form>
 <script src="js/modal.js"></script>
 	</body>
 </html>

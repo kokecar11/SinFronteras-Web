@@ -32,108 +32,110 @@ public class User implements Serializable {
    
     @Id
     @Column(name = "idUser")
-    private Integer userId=0;
+    private Integer idUser=0;
 
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "Name_User")
-    private String userName;
+    private String Name_User;
     
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "LastName_User")
-    private String userLastname;
+    private String LastName_User;
 
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "Email_User")
-    private String userEmail;
+    private String Email_User;
 
     @NotNull
     @Size(min = 1, max = 200)
     @Column(name = "Password_User")
-    private String userPassword;
+    private String Password_User;
 
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "Tel_User")
-    private String userTel;
+    private String Tel_User;
     
     
     @NotNull
     @Size(min = 1, max = 45)
     @Value("USUARIOCOMUN")
     @Column(name = "Rol_User")
-    private String userRol="USUARIOCOMUN";
+    private String Rol_User="USUARIOCOMUN";
        
     @NotNull
     @Value("0")
     @Column(name = "Status_User")
-    private Integer userStatus = 1 ;
+    private Integer Status_User = 1 ;
     
     public User() {
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getIdUser() {
+        return idUser;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setIdUser(Integer idUser) {
+        this.idUser = idUser;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName_User() {
+        return Name_User;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName_User(String Name_User) {
+        this.Name_User = Name_User;
     }
 
-    public String getUserLastname() {
-        return userLastname;
+    public String getLastName_User() {
+        return LastName_User;
     }
 
-    public void setUserLastname(String userLastname) {
-        this.userLastname = userLastname;
+    public void setLastName_User(String LastName_User) {
+        this.LastName_User = LastName_User;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public String getEmail_User() {
+        return Email_User;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setEmail_User(String Email_User) {
+        this.Email_User = Email_User;
     }
 
-    public String getUserPassword() {
-        return userPassword;
+    public String getPassword_User() {
+        return Password_User;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+    public void setPassword_User(String Password_User) {
+        this.Password_User = Password_User;
     }
 
-    public String getUserTel() {
-        return userTel;
+    public String getTel_User() {
+        return Tel_User;
     }
 
-    public void setUserTel(String userTel) {
-        this.userTel = userTel;
-    }
-     public String getUserRol() {
-        return userRol;
+    public void setTel_User(String Tel_User) {
+        this.Tel_User = Tel_User;
     }
 
-    public void setUserRol(String userRol) {
-        this.userRol = userRol;
+    public String getRol_User() {
+        return Rol_User;
     }
 
-    public Integer getUserStatus() {
-        return userStatus;
+    public void setRol_User(String Rol_User) {
+        this.Rol_User = Rol_User;
     }
 
-    public void setUserStatus(Integer userStatus) {
-        this.userStatus = userStatus;
-    }   
+    public Integer getStatus_User() {
+        return Status_User;
+    }
+
+    public void setStatus_User(Integer Status_User) {
+        this.Status_User = Status_User;
+    }
+  
 }

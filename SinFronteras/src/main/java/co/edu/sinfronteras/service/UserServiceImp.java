@@ -24,13 +24,13 @@ public class UserServiceImp implements UserService {
    
    @Transactional
    @Override
-   public void eliminar(Integer userId){
-       userDao.eliminar(userId);
+   public void eliminar(Integer idUser){
+       userDao.eliminar(idUser);
    }
    @Transactional
    @Override
-   public void modificar(User userId){
-       userDao.modificar(userId);
+   public void modificar(User idUser){
+       userDao.modificar(idUser);
    }
    
    @Transactional(readOnly = true)
@@ -40,8 +40,8 @@ public class UserServiceImp implements UserService {
    }
     @Override
     @Transactional
-    public User getUser(int userId) {
-        return userDao.getUser(userId);
+    public User getUser(int idUser) {
+        return userDao.getUser(idUser);
     }
    
  

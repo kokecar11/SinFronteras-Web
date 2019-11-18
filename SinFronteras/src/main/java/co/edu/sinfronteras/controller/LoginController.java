@@ -20,4 +20,16 @@ public class LoginController {
     public String login(Locale locale, Model model) {
         return "login";
     }
+    
+    @GetMapping("/loginAction")
+    public String loginAction(Locale locale, Model model) {
+        return "perfilUser";
+    }
+    
+    @GetMapping("/logout")
+    public String logout(Locale locale, Model model) {
+        return "/";
+    }
+    
+    
 }

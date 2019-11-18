@@ -6,8 +6,8 @@ import co.edu.sinfronteras.model.User;
 public interface UserDao {
    void save(User user);
    List<User> list();
-   void eliminar(Integer userId);
-   void modificar(User userId);
-   public User getUser(int userId);
-   User findUserByEmail(String email);
+   void eliminar(Integer idUser);
+   void modificar(User idUser);
+   public User getUser(int idUser);
+   User findUserByEmail(String Email_User);
 }

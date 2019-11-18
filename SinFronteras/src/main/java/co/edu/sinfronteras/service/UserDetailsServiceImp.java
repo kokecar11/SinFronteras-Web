@@ -26,19 +26,19 @@ public class UserDetailsServiceImp implements UserDetailsService{
 
     @Transactional(readOnly = true)
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String Email_User) throws UsernameNotFoundException {
 
-        User user = userDetailsDao.findUserByEmail(email);
+        User user = userDetailsDao.findUserByEmail(Email_User);
         UserBuilder builder = null;
         if (user != null) {
 
-            builder = org.springframework.security.core.userdetails.User.withUsername(email);
+            builder = org.springframework.security.core.userdetails.User.withUsername(Email_User);
            // builder.disabled(!user.getUserStatus());
-            builder.password(user.getUserPassword());
+            builder.password(user.getPassword_User());
            /* String[] authorities = user.getAuthorities()
                     .stream().map(a -> a.getAuthority()).toArray(String[]::new);
 */
-           String authorities = user.getUserRol();
+           String authorities = user.getRol_User();
             builder.authorities(authorities);
         } else {
             throw new UsernameNotFoundException("User not found.");

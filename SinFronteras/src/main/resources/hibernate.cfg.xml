@@ -8,7 +8,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <!--<property name="hibernate.connection.username">admin</property>-->
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">c4rp1nt3r0</property>
+    <property name="hibernate.connection.password">root</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sinfronteras</property>
     <!--<property name="hibernate.connection.url">jdbc:mysql://sinfronteras.cl1ymybeb4mb.sa-east-1.rds.amazonaws.com:3306/sinfronteras</property>-->
     <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
