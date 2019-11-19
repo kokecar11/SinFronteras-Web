@@ -80,7 +80,7 @@
       <br>
       <br>
       <div class="perfil-user">
-        <form:form action="addFundaciones" method="post" modelAttribute="fundacion" class="formularioUser">
+        <form:form action="addFundaciones" method="post" modelAttribute="institucion" class="formularioUser">
             <h2 class="slogan-2">Información de Fundación o Institución</h2>
                <form:hidden path="instId" />
                 <div class="content-formU">

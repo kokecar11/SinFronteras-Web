@@ -11,5 +11,5 @@ public interface UserDao {
    public User getUser(int idUser);
    User findUserByEmail(String Email_User);
 
-    public Object obtenerActual();
+    public Object obtenerUsuarioLogueado();
 }

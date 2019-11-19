@@ -11,5 +11,5 @@ public interface UserService {
    List<User> list();
    public User getUser(int idUser);
 
-    public Object obtenerActual();
+    public Object obtenerUsuarioLogueado();
 }

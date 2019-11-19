@@ -53,10 +53,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/perfilUser").hasAnyAuthority("ADMIN","USUARIOCOMUN")
                 .antMatchers("/loginAction").permitAll()
                 .antMatchers("/error").permitAll()
-                .antMatchers("/accesoNoAutorizado").permitAll()
-                .antMatchers("/foroManagement").hasAnyAuthority("ADMIN")
-                .antMatchers("/editUserAll").hasAnyAuthority("ADMIN","COMUN")
-                .antMatchers("/modificarUsuarioAll").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 // form login

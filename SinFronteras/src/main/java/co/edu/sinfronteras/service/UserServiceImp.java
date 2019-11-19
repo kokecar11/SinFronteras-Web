@@ -46,8 +46,8 @@ public class UserServiceImp implements UserService {
 
     @Override
     @Transactional
-    public Object obtenerActual() {
-        return userDao.obtenerActual();
+    public Object obtenerUsuarioLogueado() {
+        return userDao.obtenerUsuarioLogueado();
     }
    
  

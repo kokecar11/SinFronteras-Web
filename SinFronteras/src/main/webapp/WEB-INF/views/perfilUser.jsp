@@ -82,30 +82,30 @@
            <i class="fas fa-user-circle iconuser"></i> 
          
 			
-			<c:forEach items="${users}" var="user">
-                         <c:set var = "uservar" scope = "session" value = "${UserActual.getIdUser()}"/>
-                         <c:if test = "${user.userId == uservar}">
-				           
+            <c:forEach items="${users}" var="user">
+             <c:set var = "uservar" scope = "session" value ="${UserActual.getIdUser()}"/>
+             <c:if test = "${user.getIdUser() == uservar}">
+
            
                 <div class="input-content2"> 
                     <label class="Label-user">ID</label>
-                    <label class="Label-user2">${user.getIdUser}</label>
+                    <label class="Label-user2">${user.getIdUser()}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Nombre</label>
-                    <label class="Label-user2">${user.getName_User}</label>
+                    <label class="Label-user2">${user.getName_User()}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Apellidos</label>
-                    <label class="Label-user2">${user.getLastName_User}</label>
+                    <label class="Label-user2">${user.getLastName_User()}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Correo Electronico</label>
-                    <label class="Label-user2">${user.getEmail_User}</label>
+                    <label class="Label-user2">${user.getEmail_User()}</label>
                 </div>
                 <div class="input-content2"> 
                     <label class="Label-user">Telefono</label>
-                    <label class="Label-user2">${user.getTel_User}</label>
+                    <label class="Label-user2">${user.getTel_User()}</label>
                 </div>
            <br>
            <br>

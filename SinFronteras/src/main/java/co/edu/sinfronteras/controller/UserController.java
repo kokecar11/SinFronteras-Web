@@ -63,7 +63,7 @@ public class UserController {
         @GetMapping("/perfilUser")
         public String perfil(Locale locale ,Model model) {
             model.addAttribute("users", userService.list());
-            model.addAttribute("UserActual",userService.obtenerActual());
+            model.addAttribute("UserActual",userService.obtenerUsuarioLogueado());
             return "perfilUser";
         }
      

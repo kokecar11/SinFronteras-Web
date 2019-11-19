@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 import co.edu.sinfronteras.model.User;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Repository
@@ -61,12 +63,19 @@ public class UserDaoImp implements UserDao {
         return u;
     }
 
-    @Override
-    public Object obtenerActual() {
-        String email = null ;
-        
-        //metodo
-        return (User)findUserByEmail(email);
+   @Override
+    public String obtenerUsuarioLogueado() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            UserDetails userDetails = null;
+            if (principal instanceof UserDetails) {
+                userDetails = (UserDetails) principal;
+            }
+        if(userDetails == null){
+            return "";
+        }else{
+            return userDetails.getUsername();
+        }
+
     }
     
 
